@@ -18,20 +18,18 @@ class _RestClient implements RestClient {
   String? baseUrl;
 
   @override
-  Future<List<TaskMdl>> getTasks() async {
+  Future<ResponseGetTaskMdl> getTasks() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<TaskMdl>>(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ResponseGetTaskMdl>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/task',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    var value = _result.data!
-        .map((dynamic i) => TaskMdl.fromJson(i as Map<String, dynamic>))
-        .toList();
+    final value = ResponseGetTaskMdl.fromJson(_result.data!);
     return value;
   }
 

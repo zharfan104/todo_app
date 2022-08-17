@@ -8,7 +8,7 @@ abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
   @GET("/task")
-  Future<List<TaskMdl>> getTasks();
+  Future<ResponseGetTaskMdl> getTasks();
 
   @POST("/task")
   Future<void> addTask(@Body() TaskMdl task);

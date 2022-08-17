@@ -1,0 +1,13 @@
+name: todo_app
+
+packages:
+  - features/**
+  - resources/**
+  - shared_libraries/**
+  - '*'
+
+scripts:
+  analyze: melos exec -- "flutter analyze ."
+  get: melos exec -- "flutter pub get ."
+  format: melos exec -- "flutter format --set-exit-if-changed ."
+  clean: melos exec -- "flutter clean ."

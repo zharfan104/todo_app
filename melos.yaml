@@ -11,3 +11,4 @@ scripts:
   get: melos exec -- "flutter pub get ."
   format: melos exec -- "flutter format --set-exit-if-changed ."
   clean: melos exec -- "flutter clean ."
+  build: melos exec -- "flutter packages pub run build_runner build"

@@ -1,7 +1,4 @@
-library dependencies;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'dio/dio.dart';
+export 'get_it/get_it.dart';
+export 'json_annotation/json_annotation.dart';
+export 'retrofit/retrofit.dart';

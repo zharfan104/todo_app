@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../cubits/index.dart';
 
-class LoadAndAddTaskCubitConnecterListener {
+class AddAndLoadTaskCubitConnecterListener {
   static void listen(BuildContext context, AddTaskState state) {
     if (state.addTaskStatus.isLoading) {
       context.read<LoadTasksCubit>().showLoading();

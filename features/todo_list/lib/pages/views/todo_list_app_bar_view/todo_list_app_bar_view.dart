@@ -2,7 +2,7 @@ import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
 
-import '../../cubits/index.dart';
+import '../../../cubits/index.dart';
 
 class TodoListAppBarView extends StatelessWidget
     implements PreferredSizeWidget {

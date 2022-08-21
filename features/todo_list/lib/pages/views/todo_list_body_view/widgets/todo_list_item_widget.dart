@@ -2,7 +2,7 @@ import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:resources/resources.dart';
 
-import '../../../cubits/index.dart';
+import '../../../../cubits/index.dart';
 
 class TodoListItemWidget extends StatelessWidget {
   const TodoListItemWidget({

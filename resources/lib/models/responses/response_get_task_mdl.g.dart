@@ -6,16 +6,18 @@ part of 'response_get_task_mdl.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ResponseGetTaskMdl _$ResponseGetTaskMdlFromJson(Map<String, dynamic> json) =>
-    ResponseGetTaskMdl(
+_$_ResponseGetTaskMdl _$$_ResponseGetTaskMdlFromJson(
+        Map<String, dynamic> json) =>
+    _$_ResponseGetTaskMdl(
       count: json['count'] as int?,
-      tasks: (json['tasks'] as List<dynamic>?)
+      tasks: (json['data'] as List<dynamic>?)
           ?.map((e) => TaskMdl.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$ResponseGetTaskMdlToJson(ResponseGetTaskMdl instance) =>
+Map<String, dynamic> _$$_ResponseGetTaskMdlToJson(
+        _$_ResponseGetTaskMdl instance) =>
     <String, dynamic>{
       'count': instance.count,
-      'tasks': instance.tasks,
+      'data': instance.tasks,
     };

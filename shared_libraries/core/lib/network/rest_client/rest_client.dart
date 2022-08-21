@@ -12,4 +12,7 @@ abstract class RestClient {
 
   @POST("/task")
   Future<void> addTask(@Body() TaskMdl task);
+
+  @PUT("/task/{id}")
+  Future<void> updateTask(@Path() String? id, @Body() ParamUpdateTaskMdl task);
 }

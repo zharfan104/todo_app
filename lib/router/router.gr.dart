@@ -17,20 +17,20 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    CounterRoute.name: (routeData) {
+    TodoListRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
-          routeData: routeData, child: const CounterPage());
+          routeData: routeData, child: const TodoListPage());
     }
   };
 
   @override
-  List<RouteConfig> get routes => [RouteConfig(CounterRoute.name, path: '/')];
+  List<RouteConfig> get routes => [RouteConfig(TodoListRoute.name, path: '/')];
 }
 
 /// generated route for
-/// [CounterPage]
-class CounterRoute extends PageRouteInfo<void> {
-  const CounterRoute() : super(CounterRoute.name, path: '/');
+/// [TodoListPage]
+class TodoListRoute extends PageRouteInfo<void> {
+  const TodoListRoute() : super(TodoListRoute.name, path: '/');
 
-  static const String name = 'CounterRoute';
+  static const String name = 'TodoListRoute';
 }

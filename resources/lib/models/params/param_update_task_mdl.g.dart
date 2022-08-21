@@ -1,20 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'task_mdl.dart';
+part of 'param_update_task_mdl.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TaskMdl _$$_TaskMdlFromJson(Map<String, dynamic> json) => _$_TaskMdl(
-      description: json['description'] as String?,
+ParamUpdateTaskMdl _$ParamUpdateTaskMdlFromJson(Map<String, dynamic> json) =>
+    ParamUpdateTaskMdl(
       completed: json['completed'] as bool?,
-      id: json['_id'] as String?,
     );
 
-Map<String, dynamic> _$$_TaskMdlToJson(_$_TaskMdl instance) =>
+Map<String, dynamic> _$ParamUpdateTaskMdlToJson(ParamUpdateTaskMdl instance) =>
     <String, dynamic>{
-      'description': instance.description,
       'completed': instance.completed,
-      '_id': instance.id,
     };

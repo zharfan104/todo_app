@@ -16,8 +16,6 @@ dependencies:
     path: shared_libraries/core
   dependencies:
     path: shared_libraries/dependencies
-  edit_user:
-    path: features/edit_user
   flutter:
     sdk: flutter
   flutter_localizations:

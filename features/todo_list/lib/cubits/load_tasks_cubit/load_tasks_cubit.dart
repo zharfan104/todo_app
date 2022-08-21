@@ -14,7 +14,7 @@ class LoadTasksCubit extends Cubit<LoadTasksState> {
   final LoadTasksRepository repository;
 
   Future<void> getTasks() async {
-    emit(state.copyWith(loadTasksData: ViewData.loading()));
+    showLoading();
     final responseGetTasks = await repository.getTasks();
     emit(state.copyWith(
       loadTasksData: ViewData.loaded(data: responseGetTasks.tasks),
@@ -30,10 +30,6 @@ class LoadTasksCubit extends Cubit<LoadTasksState> {
     final updatedIsCompleted = !(task.completed ?? false);
     updatedTasks[index] = task.copyWith(completed: updatedIsCompleted);
 
-    final isAllTaskCompleted =
-        updatedTasks.every((task) => (task.completed ?? false));
-    if (!isAllTaskCompleted) _sortTasks(updatedTasks);
-
     emit(state.copyWith(loadTasksData: ViewData.loaded(data: updatedTasks)));
 
     await _updateTaskToNetwork(
@@ -41,6 +37,19 @@ class LoadTasksCubit extends Cubit<LoadTasksState> {
       isCompleted: updatedIsCompleted,
     );
   }
+
+  void sortAllTasks() {
+    final tasks = state.loadTasksData.data!;
+
+    final isAllTaskCompleted = tasks.every((task) => (task.completed ?? false));
+    if (!isAllTaskCompleted) _sortTasks(tasks);
+
+    showLoading();
+
+    emit(state.copyWith(loadTasksData: ViewData.loaded(data: tasks)));
+  }
+
+  void showLoading() => emit(state.copyWith(loadTasksData: ViewData.loading()));
 
   Future<void> _updateTaskToNetwork({String? id, bool? isCompleted}) async {
     try {

@@ -7,4 +7,3 @@ export 'freezed_annotation/freezed_annotation.dart';
 export 'get_it/get_it.dart';
 export 'json_annotation/json_annotation.dart';
 export 'retrofit/retrofit.dart';
-export 'swipeable_tile/swipeable_tile.dart';

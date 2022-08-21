@@ -1,4 +1,3 @@
-export 'auto_animated_list/auto_animated_list.dart';
 export 'auto_route/auto_route.dart';
 export 'dio/dio.dart';
 export 'equatable/equatable.dart';

@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:todo_list/cubits/index.dart';
 import 'package:todo_list/repositories/index.dart';
 
+import '../listeners/index.dart';
 import 'views/index.dart';
+import 'widgets/index.dart';
 
 class TodoListPage extends StatefulWidget {
   const TodoListPage({Key? key}) : super(key: key);
@@ -17,6 +19,9 @@ class _TodoListPageState extends State<TodoListPage> {
   final LoadTasksCubit loadTasksCubit = LoadTasksCubit(
     repository: LoadTasksRepositoryImpl(),
   );
+  final AddTaskCubit addTaskCubit = AddTaskCubit(
+    repository: AddTaskRepositoryImpl(),
+  );
 
   @override
   void initState() {
@@ -26,17 +31,37 @@ class _TodoListPageState extends State<TodoListPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider.value(
-      value: loadTasksCubit,
-      child: BlocBuilder<LoadTasksCubit, LoadTasksState>(
-        builder: (context, state) {
-          return const Scaffold(
-            appBar: MyAppBar(title: 'To do list'),
-            backgroundColor: Colors.white,
-            body: TodoListBodyView(),
-          );
-        },
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider.value(value: loadTasksCubit),
+        BlocProvider.value(value: addTaskCubit),
+      ],
+      child: BlocListener<AddTaskCubit, AddTaskState>(
+        listener: AddAndLoadTaskCubitConnecterListener.listen,
+        child: BlocBuilder<LoadTasksCubit, LoadTasksState>(
+          builder: (context, state) {
+            return Scaffold(
+              appBar: const TodoListAppBarView(),
+              backgroundColor: Colors.white,
+              body: const TodoListBodyView(),
+              floatingActionButton: AddTaskFABWidget(
+                onPressed: () => _displayTextInputDialog(context),
+              ),
+            );
+          },
+        ),
       ),
+    );
+  }
+
+  Future<void> _displayTextInputDialog(BuildContext context) async {
+    return SubmitFormDialog.show(
+      context,
+      onChanged: context.read<AddTaskCubit>().onChangeTaskDescription,
+      onSubmit: () {
+        context.read<AddTaskCubit>().addTask();
+        Navigator.pop(context);
+      },
     );
   }
 }

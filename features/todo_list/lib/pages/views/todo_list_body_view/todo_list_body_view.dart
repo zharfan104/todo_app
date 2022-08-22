@@ -12,7 +12,7 @@ class TodoListBodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<LoadTasksCubit, LoadTasksState>(
+    return BlocBuilder<TaskListCubit, TaskListState>(
       builder: (context, state) {
         if (state.loadTasksData.isLoading) {
           return const MyLoadingIndicator();

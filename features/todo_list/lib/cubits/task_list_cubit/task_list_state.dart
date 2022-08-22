@@ -2,11 +2,11 @@ import 'package:common/common.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:resources/resources.dart';
 
-part 'load_tasks_state.freezed.dart';
+part 'task_list_state.freezed.dart';
 
 @freezed
-class LoadTasksState with _$LoadTasksState {
-  const factory LoadTasksState({
+class TaskListState with _$TaskListState {
+  const factory TaskListState({
     required ViewData<List<TaskMdl>> loadTasksData,
-  }) = _LoadTasksState;
+  }) = _TaskListState;
 }

@@ -16,7 +16,7 @@ class TodoListPage extends StatefulWidget {
 }
 
 class _TodoListPageState extends State<TodoListPage> {
-  final LoadTasksCubit loadTasksCubit = LoadTasksCubit(
+  final TaskListCubit taskListCubit = TaskListCubit(
     repository: LoadTasksRepositoryImpl(),
   );
   final AddTaskCubit addTaskCubit = AddTaskCubit(
@@ -26,19 +26,19 @@ class _TodoListPageState extends State<TodoListPage> {
   @override
   void initState() {
     super.initState();
-    loadTasksCubit.getTasks();
+    taskListCubit.getTasks();
   }
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider.value(value: loadTasksCubit),
+        BlocProvider.value(value: taskListCubit),
         BlocProvider.value(value: addTaskCubit),
       ],
       child: BlocListener<AddTaskCubit, AddTaskState>(
         listener: AddAndLoadTaskCubitConnecterListener.listen,
-        child: BlocBuilder<LoadTasksCubit, LoadTasksState>(
+        child: BlocBuilder<TaskListCubit, TaskListState>(
           builder: (context, state) {
             return Scaffold(
               appBar: const TodoListAppBarView(),

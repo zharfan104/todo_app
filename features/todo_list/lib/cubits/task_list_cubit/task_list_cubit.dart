@@ -3,11 +3,11 @@ import 'package:dependencies/dependencies.dart';
 import 'package:resources/resources.dart';
 
 import '../../repositories/index.dart';
-import 'load_tasks_state.dart';
+import 'task_list_state.dart';
 
-class LoadTasksCubit extends Cubit<LoadTasksState> {
-  LoadTasksCubit({required this.repository})
-      : super(LoadTasksState(
+class TaskListCubit extends Cubit<TaskListState> {
+  TaskListCubit({required this.repository})
+      : super(TaskListState(
           loadTasksData: ViewData.initial(),
         ));
 

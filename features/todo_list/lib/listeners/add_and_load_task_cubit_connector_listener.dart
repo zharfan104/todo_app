@@ -6,10 +6,10 @@ import '../cubits/index.dart';
 class AddAndLoadTaskCubitConnecterListener {
   static void listen(BuildContext context, AddTaskState state) {
     if (state.addTaskStatus.isLoading) {
-      context.read<LoadTasksCubit>().showLoading();
+      context.read<TaskListCubit>().showLoading();
     }
     if (state.addTaskStatus.isHasData) {
-      context.read<LoadTasksCubit>().getTasks();
+      context.read<TaskListCubit>().getTasks();
     }
   }
 }

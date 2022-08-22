@@ -16,7 +16,7 @@ class TodoListAppBarView extends StatelessWidget
       title: 'To do list',
       actions: [
         IconButton(
-          onPressed: context.read<LoadTasksCubit>().sortAllTasks,
+          onPressed: context.read<TaskListCubit>().sortAllTasks,
           icon: const Icon(Icons.refresh_outlined),
         ),
       ],

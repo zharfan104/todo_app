@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'load_tasks_state.dart';
+part of 'task_list_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,31 +15,31 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$LoadTasksState {
+mixin _$TaskListState {
   ViewData<List<TaskMdl>> get loadTasksData =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $LoadTasksStateCopyWith<LoadTasksState> get copyWith =>
+  $TaskListStateCopyWith<TaskListState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoadTasksStateCopyWith<$Res> {
-  factory $LoadTasksStateCopyWith(
-          LoadTasksState value, $Res Function(LoadTasksState) then) =
-      _$LoadTasksStateCopyWithImpl<$Res>;
+abstract class $TaskListStateCopyWith<$Res> {
+  factory $TaskListStateCopyWith(
+          TaskListState value, $Res Function(TaskListState) then) =
+      _$TaskListStateCopyWithImpl<$Res>;
   $Res call({ViewData<List<TaskMdl>> loadTasksData});
 }
 
 /// @nodoc
-class _$LoadTasksStateCopyWithImpl<$Res>
-    implements $LoadTasksStateCopyWith<$Res> {
-  _$LoadTasksStateCopyWithImpl(this._value, this._then);
+class _$TaskListStateCopyWithImpl<$Res>
+    implements $TaskListStateCopyWith<$Res> {
+  _$TaskListStateCopyWithImpl(this._value, this._then);
 
-  final LoadTasksState _value;
+  final TaskListState _value;
   // ignore: unused_field
-  final $Res Function(LoadTasksState) _then;
+  final $Res Function(TaskListState) _then;
 
   @override
   $Res call({
@@ -55,31 +55,31 @@ class _$LoadTasksStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_LoadTasksStateCopyWith<$Res>
-    implements $LoadTasksStateCopyWith<$Res> {
-  factory _$$_LoadTasksStateCopyWith(
-          _$_LoadTasksState value, $Res Function(_$_LoadTasksState) then) =
-      __$$_LoadTasksStateCopyWithImpl<$Res>;
+abstract class _$$_TaskListStateCopyWith<$Res>
+    implements $TaskListStateCopyWith<$Res> {
+  factory _$$_TaskListStateCopyWith(
+          _$_TaskListState value, $Res Function(_$_TaskListState) then) =
+      __$$_TaskListStateCopyWithImpl<$Res>;
   @override
   $Res call({ViewData<List<TaskMdl>> loadTasksData});
 }
 
 /// @nodoc
-class __$$_LoadTasksStateCopyWithImpl<$Res>
-    extends _$LoadTasksStateCopyWithImpl<$Res>
-    implements _$$_LoadTasksStateCopyWith<$Res> {
-  __$$_LoadTasksStateCopyWithImpl(
-      _$_LoadTasksState _value, $Res Function(_$_LoadTasksState) _then)
-      : super(_value, (v) => _then(v as _$_LoadTasksState));
+class __$$_TaskListStateCopyWithImpl<$Res>
+    extends _$TaskListStateCopyWithImpl<$Res>
+    implements _$$_TaskListStateCopyWith<$Res> {
+  __$$_TaskListStateCopyWithImpl(
+      _$_TaskListState _value, $Res Function(_$_TaskListState) _then)
+      : super(_value, (v) => _then(v as _$_TaskListState));
 
   @override
-  _$_LoadTasksState get _value => super._value as _$_LoadTasksState;
+  _$_TaskListState get _value => super._value as _$_TaskListState;
 
   @override
   $Res call({
     Object? loadTasksData = freezed,
   }) {
-    return _then(_$_LoadTasksState(
+    return _then(_$_TaskListState(
       loadTasksData: loadTasksData == freezed
           ? _value.loadTasksData
           : loadTasksData // ignore: cast_nullable_to_non_nullable
@@ -90,22 +90,22 @@ class __$$_LoadTasksStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadTasksState implements _LoadTasksState {
-  const _$_LoadTasksState({required this.loadTasksData});
+class _$_TaskListState implements _TaskListState {
+  const _$_TaskListState({required this.loadTasksData});
 
   @override
   final ViewData<List<TaskMdl>> loadTasksData;
 
   @override
   String toString() {
-    return 'LoadTasksState(loadTasksData: $loadTasksData)';
+    return 'TaskListState(loadTasksData: $loadTasksData)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadTasksState &&
+            other is _$_TaskListState &&
             const DeepCollectionEquality()
                 .equals(other.loadTasksData, loadTasksData));
   }
@@ -116,19 +116,19 @@ class _$_LoadTasksState implements _LoadTasksState {
 
   @JsonKey(ignore: true)
   @override
-  _$$_LoadTasksStateCopyWith<_$_LoadTasksState> get copyWith =>
-      __$$_LoadTasksStateCopyWithImpl<_$_LoadTasksState>(this, _$identity);
+  _$$_TaskListStateCopyWith<_$_TaskListState> get copyWith =>
+      __$$_TaskListStateCopyWithImpl<_$_TaskListState>(this, _$identity);
 }
 
-abstract class _LoadTasksState implements LoadTasksState {
-  const factory _LoadTasksState(
+abstract class _TaskListState implements TaskListState {
+  const factory _TaskListState(
           {required final ViewData<List<TaskMdl>> loadTasksData}) =
-      _$_LoadTasksState;
+      _$_TaskListState;
 
   @override
   ViewData<List<TaskMdl>> get loadTasksData;
   @override
   @JsonKey(ignore: true)
-  _$$_LoadTasksStateCopyWith<_$_LoadTasksState> get copyWith =>
+  _$$_TaskListStateCopyWith<_$_TaskListState> get copyWith =>
       throw _privateConstructorUsedError;
 }

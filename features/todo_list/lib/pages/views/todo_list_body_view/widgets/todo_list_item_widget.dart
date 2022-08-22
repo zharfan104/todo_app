@@ -22,7 +22,7 @@ class TodoListItemWidget extends StatelessWidget {
       activeColor: Colors.green,
       checkColor: Colors.white,
       value: task.completed ?? false,
-      onChanged: (_) => context.read<LoadTasksCubit>().updateTasks(index),
+      onChanged: (_) => context.read<TaskListCubit>().updateTasks(index),
     );
   }
 }

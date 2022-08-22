@@ -66,6 +66,10 @@ class TaskListCubit extends Cubit<TaskListState> {
 
   void _sortTasks(List<TaskMdl> tasks) {
     tasks.sort((a, b) {
+      if (a.completed == b.completed) {
+        return 0;
+      }
+
       if (b.completed ?? false) {
         return -1;
       }

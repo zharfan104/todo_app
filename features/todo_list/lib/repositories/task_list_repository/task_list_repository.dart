@@ -6,4 +6,5 @@ abstract class TaskListRepository {
     String? id,
     bool? isCompleted,
   });
+  Future<void> deleteTask({required String id});
 }

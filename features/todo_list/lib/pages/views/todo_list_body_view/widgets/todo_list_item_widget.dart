@@ -16,13 +16,17 @@ class TodoListItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CheckboxListTile(
-      title: Text(task.description ?? ''),
-      autofocus: false,
-      activeColor: Colors.green,
-      checkColor: Colors.white,
-      value: task.completed ?? false,
-      onChanged: (_) => context.read<TaskListCubit>().updateTasks(index),
+    return Dismissible(
+      key: ValueKey(task.id),
+      onDismissed: (_) => context.read<TaskListCubit>().deleteTask(index),
+      child: CheckboxListTile(
+        title: Text(task.description ?? ''),
+        autofocus: false,
+        activeColor: Colors.green,
+        checkColor: Colors.white,
+        value: task.completed ?? false,
+        onChanged: (_) => context.read<TaskListCubit>().updateTasks(index),
+      ),
     );
   }
 }

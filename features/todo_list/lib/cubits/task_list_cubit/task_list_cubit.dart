@@ -38,6 +38,13 @@ class TaskListCubit extends Cubit<TaskListState> {
     );
   }
 
+  Future<void> deleteTask(int index) async {
+    final tasks = List<TaskMdl>.from(state.loadTasksData.data!);
+    final task = tasks.removeAt(index);
+    await repository.deleteTask(id: task.id ?? '');
+    emit(state.copyWith(loadTasksData: ViewData.loaded(data: tasks)));
+  }
+
   void sortAllTasks() {
     final tasks = state.loadTasksData.data!;
 

@@ -19,4 +19,7 @@ class TaskListRepositoryImpl implements TaskListRepository {
         id,
         ParamUpdateTaskMdl(completed: isCompleted),
       );
+
+  @override
+  Future<void> deleteTask({required String id}) => client.deleteTask(id);
 }

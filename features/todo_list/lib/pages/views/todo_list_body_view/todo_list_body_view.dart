@@ -14,16 +14,18 @@ class TodoListBodyView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<TaskListCubit, TaskListState>(
       builder: (context, state) {
-        if (state.loadTasksData.isLoading) {
+        final taskListState = state.loadTasksData;
+
+        if (taskListState.isLoading) {
           return const MyLoadingIndicator();
         }
 
-        if (state.loadTasksData.isError) {
+        if (taskListState.isError) {
           return Text(state.loadTasksData.message);
         }
 
-        if (state.loadTasksData.isHasData) {
-          final tasks = state.loadTasksData.data!;
+        if (taskListState.isHasData) {
+          final tasks = taskListState.data!;
 
           return ListView.builder(
             itemCount: tasks.length,

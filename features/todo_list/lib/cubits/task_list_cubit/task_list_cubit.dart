@@ -11,7 +11,7 @@ class TaskListCubit extends Cubit<TaskListState> {
           loadTasksData: ViewData.initial(),
         ));
 
-  final LoadTasksRepository repository;
+  final TaskListRepository repository;
 
   Future<void> getTasks() async {
     showLoading();

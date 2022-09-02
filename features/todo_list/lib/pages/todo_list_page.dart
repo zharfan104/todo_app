@@ -17,7 +17,7 @@ class TodoListPage extends StatefulWidget {
 
 class _TodoListPageState extends State<TodoListPage> {
   final TaskListCubit taskListCubit = TaskListCubit(
-    repository: LoadTasksRepositoryImpl(),
+    repository: TaskListRepositoryImpl(),
   );
   final AddTaskCubit addTaskCubit = AddTaskCubit(
     repository: AddTaskRepositoryImpl(),

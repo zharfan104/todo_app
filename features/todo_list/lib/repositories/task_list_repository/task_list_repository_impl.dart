@@ -2,9 +2,9 @@ import 'package:core/core.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:resources/resources.dart';
 
-import 'load_tasks_repository.dart';
+import 'task_list_repository.dart';
 
-class LoadTasksRepositoryImpl implements LoadTasksRepository {
+class TaskListRepositoryImpl implements TaskListRepository {
   final RestClient client = sl();
 
   @override

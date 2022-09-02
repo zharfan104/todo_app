@@ -1,6 +1,6 @@
 import 'package:resources/resources.dart';
 
-abstract class LoadTasksRepository {
+abstract class TaskListRepository {
   Future<ResponseGetTaskMdl> getTasks();
   Future<void> updateTasks({
     String? id,

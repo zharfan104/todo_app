@@ -27,6 +27,10 @@ class TodoListBodyView extends StatelessWidget {
         if (taskListState.isHasData) {
           final tasks = taskListState.data!;
 
+          if (tasks.isEmpty) {
+            return const Center(child: Text('Add your first todo :D'));
+          }
+
           return ListView.builder(
             itemCount: tasks.length,
             itemBuilder: (context, index) => TodoListItemWidget(

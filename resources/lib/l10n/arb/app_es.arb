@@ -1,0 +1,7 @@
+{
+    "@@locale": "es",
+    "counterAppBarTitle": "Counter",
+    "newTask": "New Task",
+    "submit": "Submit",
+    "emptyTask": "Add your first todo :D"
+}

@@ -8,7 +8,7 @@
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:todo_app/l10n/l10n.dart';
+import 'package:resources/resources.dart';
 import 'package:todo_app/router/router.dart';
 
 class App extends StatelessWidget {

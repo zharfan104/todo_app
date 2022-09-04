@@ -1,6 +1,7 @@
 import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
+import 'package:router/router.dart';
 
 import '../../../cubits/index.dart';
 
@@ -20,6 +21,10 @@ class TodoListAppBarView extends StatelessWidget
           icon: const Icon(Icons.refresh_outlined),
         ),
       ],
+      leading: IconButton(
+        icon: const Icon(Icons.account_circle_outlined),
+        onPressed: () => context.router.push(const ProfileRoute()),
+      ),
     );
   }
 

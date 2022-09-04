@@ -2,7 +2,7 @@
 
 import 'package:dependencies/dependencies.dart';
 
-import '../../resources.dart';
+import '../../../resources.dart';
 
 part 'response_get_task_mdl.freezed.dart';
 part 'response_get_task_mdl.g.dart';

@@ -17,6 +17,8 @@ dependencies:
     path: ../../shared_libraries/core
   dependencies:
     path: ../../shared_libraries/dependencies
+  router:
+    path: ../../shared_libraries/router
   flutter:
     sdk: flutter
   resources:

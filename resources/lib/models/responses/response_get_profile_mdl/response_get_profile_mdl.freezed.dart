@@ -21,8 +21,8 @@ ResponseGetProfileMdl _$ResponseGetProfileMdlFromJson(
 
 /// @nodoc
 mixin _$ResponseGetProfileMdl {
-  String? get name => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $ResponseGetProfileMdlCopyWith<$Res> {
   factory $ResponseGetProfileMdlCopyWith(ResponseGetProfileMdl value,
           $Res Function(ResponseGetProfileMdl) then) =
       _$ResponseGetProfileMdlCopyWithImpl<$Res>;
-  $Res call({String? name, String? email});
+  $Res call({String name, String email});
 }
 
 /// @nodoc
@@ -56,11 +56,11 @@ class _$ResponseGetProfileMdlCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -72,7 +72,7 @@ abstract class _$$_ResponseGetProfileMdlCopyWith<$Res>
           $Res Function(_$_ResponseGetProfileMdl) then) =
       __$$_ResponseGetProfileMdlCopyWithImpl<$Res>;
   @override
-  $Res call({String? name, String? email});
+  $Res call({String name, String email});
 }
 
 /// @nodoc
@@ -96,11 +96,11 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -108,15 +108,17 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
-  const _$_ResponseGetProfileMdl({this.name, this.email});
+  const _$_ResponseGetProfileMdl({this.name = '', this.email = ''});
 
   factory _$_ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =>
       _$$_ResponseGetProfileMdlFromJson(json);
 
   @override
-  final String? name;
+  @JsonKey()
+  final String name;
   @override
-  final String? email;
+  @JsonKey()
+  final String email;
 
   @override
   String toString() {
@@ -155,15 +157,15 @@ class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
 
 abstract class _ResponseGetProfileMdl implements ResponseGetProfileMdl {
   const factory _ResponseGetProfileMdl(
-      {final String? name, final String? email}) = _$_ResponseGetProfileMdl;
+      {final String name, final String email}) = _$_ResponseGetProfileMdl;
 
   factory _ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =
       _$_ResponseGetProfileMdl.fromJson;
 
   @override
-  String? get name;
+  String get name;
   @override
-  String? get email;
+  String get email;
   @override
   @JsonKey(ignore: true)
   _$$_ResponseGetProfileMdlCopyWith<_$_ResponseGetProfileMdl> get copyWith =>

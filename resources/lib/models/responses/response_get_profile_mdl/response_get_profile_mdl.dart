@@ -8,8 +8,8 @@ part 'response_get_profile_mdl.g.dart';
 @freezed
 class ResponseGetProfileMdl with _$ResponseGetProfileMdl {
   const factory ResponseGetProfileMdl({
-    String? name,
-    String? email,
+    @Default('') String name,
+    @Default('') String email,
   }) = _ResponseGetProfileMdl;
 
   factory ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =>

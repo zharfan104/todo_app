@@ -9,8 +9,8 @@ part of 'response_get_profile_mdl.dart';
 _$_ResponseGetProfileMdl _$$_ResponseGetProfileMdlFromJson(
         Map<String, dynamic> json) =>
     _$_ResponseGetProfileMdl(
-      name: json['name'] as String?,
-      email: json['email'] as String?,
+      name: json['name'] as String? ?? '',
+      email: json['email'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_ResponseGetProfileMdlToJson(

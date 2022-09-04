@@ -20,8 +20,9 @@ dependencies:
     sdk: flutter
   resources:
     path: resources
-  todo_list:
-    path: features/todo_list
+  router:
+    path: shared_libraries/router
+
 
 
 dev_dependencies:

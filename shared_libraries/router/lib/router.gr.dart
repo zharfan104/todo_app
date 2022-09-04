@@ -20,11 +20,18 @@ class _$AppRouter extends RootStackRouter {
     TodoListRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
           routeData: routeData, child: const TodoListPage());
+    },
+    ProfileRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+          routeData: routeData, child: const ProfilePage());
     }
   };
 
   @override
-  List<RouteConfig> get routes => [RouteConfig(TodoListRoute.name, path: '/')];
+  List<RouteConfig> get routes => [
+        RouteConfig(TodoListRoute.name, path: '/'),
+        RouteConfig(ProfileRoute.name, path: '/')
+      ];
 }
 
 /// generated route for
@@ -33,4 +40,12 @@ class TodoListRoute extends PageRouteInfo<void> {
   const TodoListRoute() : super(TodoListRoute.name, path: '/');
 
   static const String name = 'TodoListRoute';
+}
+
+/// generated route for
+/// [ProfilePage]
+class ProfileRoute extends PageRouteInfo<void> {
+  const ProfileRoute() : super(ProfileRoute.name, path: '/');
+
+  static const String name = 'ProfileRoute';
 }

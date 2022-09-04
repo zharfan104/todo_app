@@ -1,5 +1,5 @@
 import 'package:dependencies/dependencies.dart';
-import 'package:todo_app/router/router.dart';
+import 'package:router/router.dart';
 
 class RegisterMainAppModule {
   RegisterMainAppModule() {

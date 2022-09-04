@@ -88,7 +88,7 @@ class _RestClient implements RestClient {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ResponseGetProfileMdl>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, 'user/me',
+                .compose(_dio.options, '/user/me',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ResponseGetProfileMdl.fromJson(_result.data!);

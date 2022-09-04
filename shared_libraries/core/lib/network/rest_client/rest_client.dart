@@ -19,6 +19,6 @@ abstract class RestClient {
   @DELETE("/task/{id}")
   Future<void> deleteTask(@Path() String? id);
 
-  @GET("user/me")
+  @GET("/user/me")
   Future<ResponseGetProfileMdl> getProfile();
 }

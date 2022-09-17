@@ -10,6 +10,10 @@ class ErrorTextBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(text ?? ''));
+    return Center(
+        child: Container(
+      color: Colors.red,
+      child: Text(text ?? ''),
+    ));
   }
 }

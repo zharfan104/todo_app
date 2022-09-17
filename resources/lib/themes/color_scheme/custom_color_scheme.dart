@@ -37,7 +37,7 @@ class CustomColorScheme {
     primaryDarker: Color.fromRGBO(0, 44, 75, 1),
     primaryDarkest: Color.fromRGBO(1, 13, 19, 1),
     onPrimary: Color.fromRGBO(255, 255, 255, 1),
-    secondary: Color.fromRGBO(0, 191, 255, 1),
+    secondary: Color.fromRGBO(55, 55, 55, 1),
     onSecondary: Color.fromRGBO(255, 255, 255, 1),
     background: Color.fromARGB(75, 75, 75, 0),
     onBackground: Color.fromRGBO(255, 255, 255, 1),

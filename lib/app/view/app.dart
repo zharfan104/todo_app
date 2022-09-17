@@ -18,20 +18,21 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     final _appRouter = sl<AppRouter>();
 
-    return MaterialApp.router(
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
-        colorScheme: ColorScheme.fromSwatch(
-          accentColor: const Color(0xFF13B9FF),
-        ),
+    return AdaptiveTheme(
+      light: ThemeHelper.buildLightTheme(),
+      dark: ThemeHelper.buildDarkTheme(),
+      initial: AdaptiveThemeMode.light,
+      builder: (theme, darkTheme) => MaterialApp.router(
+        theme: theme,
+        darkTheme: darkTheme,
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        routerDelegate: _appRouter.delegate(),
+        routeInformationParser: _appRouter.defaultRouteParser(),
       ),
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-      ],
-      supportedLocales: AppLocalizations.supportedLocales,
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

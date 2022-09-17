@@ -17,9 +17,7 @@ class ProfileCubit extends Cubit<ProfileState> {
     final response = await repository.getProfile();
 
     emit(state.copyWith(
-      name: response.name,
-      email: response.email,
-      loadProfileStatus: ViewData.loaded(),
+      loadProfileStatus: ViewData.loaded(data: response),
     ));
   }
 }

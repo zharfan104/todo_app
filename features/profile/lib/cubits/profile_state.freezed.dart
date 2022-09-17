@@ -16,9 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ProfileState {
-  String get name => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  ViewData<void> get loadProfileStatus => throw _privateConstructorUsedError;
+  ViewData<ResponseGetProfileMdl> get loadProfileStatus =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProfileStateCopyWith<ProfileState> get copyWith =>
@@ -30,7 +29,7 @@ abstract class $ProfileStateCopyWith<$Res> {
   factory $ProfileStateCopyWith(
           ProfileState value, $Res Function(ProfileState) then) =
       _$ProfileStateCopyWithImpl<$Res>;
-  $Res call({String name, String email, ViewData<void> loadProfileStatus});
+  $Res call({ViewData<ResponseGetProfileMdl> loadProfileStatus});
 }
 
 /// @nodoc
@@ -43,23 +42,13 @@ class _$ProfileStateCopyWithImpl<$Res> implements $ProfileStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? name = freezed,
-    Object? email = freezed,
     Object? loadProfileStatus = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: email == freezed
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
       loadProfileStatus: loadProfileStatus == freezed
           ? _value.loadProfileStatus
           : loadProfileStatus // ignore: cast_nullable_to_non_nullable
-              as ViewData<void>,
+              as ViewData<ResponseGetProfileMdl>,
     ));
   }
 }
@@ -71,7 +60,7 @@ abstract class _$$_ProfileStateCopyWith<$Res>
           _$_ProfileState value, $Res Function(_$_ProfileState) then) =
       __$$_ProfileStateCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String email, ViewData<void> loadProfileStatus});
+  $Res call({ViewData<ResponseGetProfileMdl> loadProfileStatus});
 }
 
 /// @nodoc
@@ -87,23 +76,13 @@ class __$$_ProfileStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? name = freezed,
-    Object? email = freezed,
     Object? loadProfileStatus = freezed,
   }) {
     return _then(_$_ProfileState(
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: email == freezed
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
       loadProfileStatus: loadProfileStatus == freezed
           ? _value.loadProfileStatus
           : loadProfileStatus // ignore: cast_nullable_to_non_nullable
-              as ViewData<void>,
+              as ViewData<ResponseGetProfileMdl>,
     ));
   }
 }
@@ -111,21 +90,14 @@ class __$$_ProfileStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_ProfileState implements _ProfileState {
-  const _$_ProfileState(
-      {this.name = '', this.email = '', required this.loadProfileStatus});
+  const _$_ProfileState({required this.loadProfileStatus});
 
   @override
-  @JsonKey()
-  final String name;
-  @override
-  @JsonKey()
-  final String email;
-  @override
-  final ViewData<void> loadProfileStatus;
+  final ViewData<ResponseGetProfileMdl> loadProfileStatus;
 
   @override
   String toString() {
-    return 'ProfileState(name: $name, email: $email, loadProfileStatus: $loadProfileStatus)';
+    return 'ProfileState(loadProfileStatus: $loadProfileStatus)';
   }
 
   @override
@@ -133,18 +105,13 @@ class _$_ProfileState implements _ProfileState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ProfileState &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality()
                 .equals(other.loadProfileStatus, loadProfileStatus));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(loadProfileStatus));
+      runtimeType, const DeepCollectionEquality().hash(loadProfileStatus));
 
   @JsonKey(ignore: true)
   @override
@@ -154,16 +121,11 @@ class _$_ProfileState implements _ProfileState {
 
 abstract class _ProfileState implements ProfileState {
   const factory _ProfileState(
-      {final String name,
-      final String email,
-      required final ViewData<void> loadProfileStatus}) = _$_ProfileState;
+          {required final ViewData<ResponseGetProfileMdl> loadProfileStatus}) =
+      _$_ProfileState;
 
   @override
-  String get name;
-  @override
-  String get email;
-  @override
-  ViewData<void> get loadProfileStatus;
+  ViewData<ResponseGetProfileMdl> get loadProfileStatus;
   @override
   @JsonKey(ignore: true)
   _$$_ProfileStateCopyWith<_$_ProfileState> get copyWith =>

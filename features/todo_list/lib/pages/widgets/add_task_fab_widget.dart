@@ -13,7 +13,7 @@ class AddTaskFABWidget extends StatelessWidget {
     return FloatingActionButton(
       onPressed: onPressed,
       focusElevation: 5,
-      child: const Icon(Icons.edit, color: Colors.white),
+      child: const Icon(Icons.edit),
     );
   }
 }

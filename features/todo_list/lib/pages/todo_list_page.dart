@@ -42,7 +42,6 @@ class _TodoListPageState extends State<TodoListPage> {
           builder: (context, state) {
             return Scaffold(
               appBar: const TodoListAppBarView(),
-              backgroundColor: Colors.white,
               body: const TodoListBodyView(),
               floatingActionButton: AddTaskFABWidget(
                 onPressed: () => _displayTextInputDialog(context),

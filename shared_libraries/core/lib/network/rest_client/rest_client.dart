@@ -21,4 +21,7 @@ abstract class RestClient {
 
   @GET("/user/me")
   Future<ResponseGetProfileMdl> getProfile();
+
+  @PUT("/user/me")
+  Future<ResponseGetProfileMdl> updateProfile(@Body() ParamUpdateProfileMdl profile);
 }

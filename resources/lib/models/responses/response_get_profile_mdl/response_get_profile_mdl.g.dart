@@ -11,7 +11,7 @@ _$_ResponseGetProfileMdl _$$_ResponseGetProfileMdlFromJson(
     _$_ResponseGetProfileMdl(
       name: json['name'] as String? ?? '',
       email: json['email'] as String? ?? '',
-      age: json['age'] as String? ?? '',
+      age: json['age'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$$_ResponseGetProfileMdlToJson(

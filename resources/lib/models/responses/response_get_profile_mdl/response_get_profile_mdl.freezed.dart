@@ -23,7 +23,7 @@ ResponseGetProfileMdl _$ResponseGetProfileMdlFromJson(
 mixin _$ResponseGetProfileMdl {
   String get name => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
-  String get age => throw _privateConstructorUsedError;
+  int get age => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +36,7 @@ abstract class $ResponseGetProfileMdlCopyWith<$Res> {
   factory $ResponseGetProfileMdlCopyWith(ResponseGetProfileMdl value,
           $Res Function(ResponseGetProfileMdl) then) =
       _$ResponseGetProfileMdlCopyWithImpl<$Res>;
-  $Res call({String name, String email, String age});
+  $Res call({String name, String email, int age});
 }
 
 /// @nodoc
@@ -66,7 +66,7 @@ class _$ResponseGetProfileMdlCopyWithImpl<$Res>
       age: age == freezed
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ));
   }
 }
@@ -78,7 +78,7 @@ abstract class _$$_ResponseGetProfileMdlCopyWith<$Res>
           $Res Function(_$_ResponseGetProfileMdl) then) =
       __$$_ResponseGetProfileMdlCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String email, String age});
+  $Res call({String name, String email, int age});
 }
 
 /// @nodoc
@@ -111,7 +111,7 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
       age: age == freezed
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ));
   }
 }
@@ -120,7 +120,7 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
   const _$_ResponseGetProfileMdl(
-      {this.name = '', this.email = '', this.age = ''});
+      {this.name = '', this.email = '', this.age = 0});
 
   factory _$_ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =>
       _$$_ResponseGetProfileMdlFromJson(json);
@@ -133,7 +133,7 @@ class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
   final String email;
   @override
   @JsonKey()
-  final String age;
+  final int age;
 
   @override
   String toString() {
@@ -176,7 +176,7 @@ abstract class _ResponseGetProfileMdl implements ResponseGetProfileMdl {
   const factory _ResponseGetProfileMdl(
       {final String name,
       final String email,
-      final String age}) = _$_ResponseGetProfileMdl;
+      final int age}) = _$_ResponseGetProfileMdl;
 
   factory _ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =
       _$_ResponseGetProfileMdl.fromJson;
@@ -186,7 +186,7 @@ abstract class _ResponseGetProfileMdl implements ResponseGetProfileMdl {
   @override
   String get email;
   @override
-  String get age;
+  int get age;
   @override
   @JsonKey(ignore: true)
   _$$_ResponseGetProfileMdlCopyWith<_$_ResponseGetProfileMdl> get copyWith =>

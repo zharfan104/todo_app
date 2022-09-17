@@ -10,7 +10,7 @@ class ResponseGetProfileMdl with _$ResponseGetProfileMdl {
   const factory ResponseGetProfileMdl({
     @Default('') String name,
     @Default('') String email,
-    @Default('') String age,
+    @Default(0) int age,
   }) = _ResponseGetProfileMdl;
 
   factory ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) => _$ResponseGetProfileMdlFromJson(json);

@@ -40,7 +40,7 @@ class _TodoListPageState extends State<TodoListPage> {
         listener: AddAndLoadTaskCubitConnecterListener.listen,
         child: BlocBuilder<TaskListCubit, TaskListState>(
           builder: (context, state) {
-            return Scaffold(
+            return BasePage(
               appBar: const TodoListAppBarView(),
               body: const TodoListBodyView(),
               floatingActionButton: AddTaskFABWidget(

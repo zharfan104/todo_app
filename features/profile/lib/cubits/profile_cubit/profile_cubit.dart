@@ -1,9 +1,9 @@
 import 'package:common/common.dart';
 import 'package:dependencies/dependencies.dart';
-import 'package:profile/cubits/profile_state.dart';
 import 'package:resources/resources.dart';
 
-import '../repositories/profile_repository.dart';
+import '../../repositories/index.dart';
+import 'index.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {
   ProfileCubit({required this.repository})

@@ -9,11 +9,15 @@ part of 'param_update_profile_mdl.dart';
 ParamUpdateProfileMdl _$ParamUpdateProfileMdlFromJson(
         Map<String, dynamic> json) =>
     ParamUpdateProfileMdl(
-      completed: json['completed'] as bool?,
+      name: json['name'] as String?,
+      email: json['email'] as String?,
+      age: json['age'] as int?,
     );
 
 Map<String, dynamic> _$ParamUpdateProfileMdlToJson(
         ParamUpdateProfileMdl instance) =>
     <String, dynamic>{
-      'completed': instance.completed,
+      'name': instance.name,
+      'email': instance.email,
+      'age': instance.age,
     };

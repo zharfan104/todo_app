@@ -8,4 +8,10 @@ class ProfileRepositoryImpl extends ProfileRepository {
 
   @override
   Future<ResponseGetProfileMdl> getProfile() => client.getProfile();
+
+  @override
+  Future<ResponseGetProfileMdl> updateProfile({
+    required ParamUpdateProfileMdl profile,
+  }) =>
+      client.updateProfile(profile);
 }

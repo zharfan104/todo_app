@@ -13,5 +13,6 @@ class ResponseGetProfileMdl with _$ResponseGetProfileMdl {
     @Default(0) int age,
   }) = _ResponseGetProfileMdl;
 
-  factory ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) => _$ResponseGetProfileMdlFromJson(json);
+  factory ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =>
+      _$ResponseGetProfileMdlFromJson(json);
 }

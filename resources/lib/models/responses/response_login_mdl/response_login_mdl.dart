@@ -11,5 +11,6 @@ class ResponseLoginMdl with _$ResponseLoginMdl {
     @Default('') String token,
   }) = _ResponseLoginMdl;
 
-  factory ResponseLoginMdl.fromJson(Map<String, dynamic> json) => _$ResponseLoginMdlFromJson(json);
+  factory ResponseLoginMdl.fromJson(Map<String, dynamic> json) =>
+      _$ResponseLoginMdlFromJson(json);
 }

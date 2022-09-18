@@ -13,5 +13,6 @@ class TaskMdl with _$TaskMdl {
     @JsonKey(name: '_id') String? id,
   }) = _TaskMdl;
 
-  factory TaskMdl.fromJson(Map<String, dynamic> json) => _$TaskMdlFromJson(json);
+  factory TaskMdl.fromJson(Map<String, dynamic> json) =>
+      _$TaskMdlFromJson(json);
 }

@@ -16,7 +16,8 @@ class ParamRegisterMdl {
     this.age,
   });
 
-  factory ParamRegisterMdl.fromJson(Map<String, dynamic> json) => _$ParamRegisterMdlFromJson(json);
+  factory ParamRegisterMdl.fromJson(Map<String, dynamic> json) =>
+      _$ParamRegisterMdlFromJson(json);
 
   Map<String, dynamic> toJson() => _$ParamRegisterMdlToJson(this);
 }

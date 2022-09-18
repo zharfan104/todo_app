@@ -12,7 +12,8 @@ class ParamLoginMdl {
     this.password,
   });
 
-  factory ParamLoginMdl.fromJson(Map<String, dynamic> json) => _$ParamLoginMdlFromJson(json);
+  factory ParamLoginMdl.fromJson(Map<String, dynamic> json) =>
+      _$ParamLoginMdlFromJson(json);
 
   Map<String, dynamic> toJson() => _$ParamLoginMdlToJson(this);
 }

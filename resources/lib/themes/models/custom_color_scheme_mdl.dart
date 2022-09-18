@@ -135,7 +135,8 @@ class CustomColorSchemeMdl extends ThemeExtension<CustomColorSchemeMdl> {
 
   // Controls how the properties change on theme changes
   @override
-  CustomColorSchemeMdl lerp(ThemeExtension<CustomColorSchemeMdl>? other, double t) {
+  CustomColorSchemeMdl lerp(
+      ThemeExtension<CustomColorSchemeMdl>? other, double t) {
     if (other is! CustomColorSchemeMdl) {
       return this;
     }

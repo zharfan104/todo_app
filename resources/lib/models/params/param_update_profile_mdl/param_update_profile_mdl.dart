@@ -14,7 +14,8 @@ class ParamUpdateProfileMdl {
     this.age,
   });
 
-  factory ParamUpdateProfileMdl.fromJson(Map<String, dynamic> json) => _$ParamUpdateProfileMdlFromJson(json);
+  factory ParamUpdateProfileMdl.fromJson(Map<String, dynamic> json) =>
+      _$ParamUpdateProfileMdlFromJson(json);
 
   Map<String, dynamic> toJson() => _$ParamUpdateProfileMdlToJson(this);
 }

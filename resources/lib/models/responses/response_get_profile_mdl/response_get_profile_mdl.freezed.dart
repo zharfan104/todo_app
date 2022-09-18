@@ -14,7 +14,8 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-ResponseGetProfileMdl _$ResponseGetProfileMdlFromJson(Map<String, dynamic> json) {
+ResponseGetProfileMdl _$ResponseGetProfileMdlFromJson(
+    Map<String, dynamic> json) {
   return _ResponseGetProfileMdl.fromJson(json);
 }
 
@@ -26,18 +27,21 @@ mixin _$ResponseGetProfileMdl {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ResponseGetProfileMdlCopyWith<ResponseGetProfileMdl> get copyWith => throw _privateConstructorUsedError;
+  $ResponseGetProfileMdlCopyWith<ResponseGetProfileMdl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResponseGetProfileMdlCopyWith<$Res> {
-  factory $ResponseGetProfileMdlCopyWith(ResponseGetProfileMdl value, $Res Function(ResponseGetProfileMdl) then) =
+  factory $ResponseGetProfileMdlCopyWith(ResponseGetProfileMdl value,
+          $Res Function(ResponseGetProfileMdl) then) =
       _$ResponseGetProfileMdlCopyWithImpl<$Res>;
   $Res call({String name, String email, int age});
 }
 
 /// @nodoc
-class _$ResponseGetProfileMdlCopyWithImpl<$Res> implements $ResponseGetProfileMdlCopyWith<$Res> {
+class _$ResponseGetProfileMdlCopyWithImpl<$Res>
+    implements $ResponseGetProfileMdlCopyWith<$Res> {
   _$ResponseGetProfileMdlCopyWithImpl(this._value, this._then);
 
   final ResponseGetProfileMdl _value;
@@ -68,22 +72,26 @@ class _$ResponseGetProfileMdlCopyWithImpl<$Res> implements $ResponseGetProfileMd
 }
 
 /// @nodoc
-abstract class _$$_ResponseGetProfileMdlCopyWith<$Res> implements $ResponseGetProfileMdlCopyWith<$Res> {
-  factory _$$_ResponseGetProfileMdlCopyWith(
-          _$_ResponseGetProfileMdl value, $Res Function(_$_ResponseGetProfileMdl) then) =
+abstract class _$$_ResponseGetProfileMdlCopyWith<$Res>
+    implements $ResponseGetProfileMdlCopyWith<$Res> {
+  factory _$$_ResponseGetProfileMdlCopyWith(_$_ResponseGetProfileMdl value,
+          $Res Function(_$_ResponseGetProfileMdl) then) =
       __$$_ResponseGetProfileMdlCopyWithImpl<$Res>;
   @override
   $Res call({String name, String email, int age});
 }
 
 /// @nodoc
-class __$$_ResponseGetProfileMdlCopyWithImpl<$Res> extends _$ResponseGetProfileMdlCopyWithImpl<$Res>
+class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
+    extends _$ResponseGetProfileMdlCopyWithImpl<$Res>
     implements _$$_ResponseGetProfileMdlCopyWith<$Res> {
-  __$$_ResponseGetProfileMdlCopyWithImpl(_$_ResponseGetProfileMdl _value, $Res Function(_$_ResponseGetProfileMdl) _then)
+  __$$_ResponseGetProfileMdlCopyWithImpl(_$_ResponseGetProfileMdl _value,
+      $Res Function(_$_ResponseGetProfileMdl) _then)
       : super(_value, (v) => _then(v as _$_ResponseGetProfileMdl));
 
   @override
-  _$_ResponseGetProfileMdl get _value => super._value as _$_ResponseGetProfileMdl;
+  _$_ResponseGetProfileMdl get _value =>
+      super._value as _$_ResponseGetProfileMdl;
 
   @override
   $Res call({
@@ -111,9 +119,11 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res> extends _$ResponseGetProfileM
 /// @nodoc
 @JsonSerializable()
 class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
-  const _$_ResponseGetProfileMdl({this.name = '', this.email = '', this.age = 0});
+  const _$_ResponseGetProfileMdl(
+      {this.name = '', this.email = '', this.age = 0});
 
-  factory _$_ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) => _$$_ResponseGetProfileMdlFromJson(json);
+  factory _$_ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =>
+      _$$_ResponseGetProfileMdlFromJson(json);
 
   @override
   @JsonKey()
@@ -142,13 +152,17 @@ class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(email), const DeepCollectionEquality().hash(age));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(age));
 
   @JsonKey(ignore: true)
   @override
   _$$_ResponseGetProfileMdlCopyWith<_$_ResponseGetProfileMdl> get copyWith =>
-      __$$_ResponseGetProfileMdlCopyWithImpl<_$_ResponseGetProfileMdl>(this, _$identity);
+      __$$_ResponseGetProfileMdlCopyWithImpl<_$_ResponseGetProfileMdl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -159,10 +173,13 @@ class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
 }
 
 abstract class _ResponseGetProfileMdl implements ResponseGetProfileMdl {
-  const factory _ResponseGetProfileMdl({final String name, final String email, final int age}) =
-      _$_ResponseGetProfileMdl;
+  const factory _ResponseGetProfileMdl(
+      {final String name,
+      final String email,
+      final int age}) = _$_ResponseGetProfileMdl;
 
-  factory _ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) = _$_ResponseGetProfileMdl.fromJson;
+  factory _ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =
+      _$_ResponseGetProfileMdl.fromJson;
 
   @override
   String get name;
@@ -172,5 +189,6 @@ abstract class _ResponseGetProfileMdl implements ResponseGetProfileMdl {
   int get age;
   @override
   @JsonKey(ignore: true)
-  _$$_ResponseGetProfileMdlCopyWith<_$_ResponseGetProfileMdl> get copyWith => throw _privateConstructorUsedError;
+  _$$_ResponseGetProfileMdlCopyWith<_$_ResponseGetProfileMdl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

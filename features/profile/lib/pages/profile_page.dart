@@ -1,10 +1,10 @@
 import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
-import 'package:profile/pages/widgets/edit_profile_form.dart';
 
 import '../cubits/index.dart';
-import '../repositories/profile_repository_impl.dart';
+import '../repositories/index.dart';
+import 'widgets/index.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return BlocProvider.value(
       value: profileCubit,
       child: BasePage(
-        appBar: const MyAppBar(title: "Edit Profile"),
+        appBar: const ProfilePageAppBar(),
         body: BlocBuilder<ProfileCubit, ProfileState>(
           builder: (context, state) {
             if (state.loadProfileStatus.isLoading) {

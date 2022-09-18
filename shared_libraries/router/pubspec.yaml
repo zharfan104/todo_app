@@ -19,6 +19,8 @@ dependencies:
     path: ../dependencies
   flutter:
     sdk: flutter
+  login:
+    path: ../../features/login
   profile:
     path: ../../features/profile
   resources:

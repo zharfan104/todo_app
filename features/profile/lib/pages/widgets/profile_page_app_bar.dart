@@ -14,7 +14,8 @@ class ProfilePageAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LogoutCubit(logoutRepository: LogoutRepositoryImpl()),
+      create: (context) =>
+          LogoutCubit(logoutRepository: LogoutRepositoryImpl()),
       child: BlocConsumer<LogoutCubit, LogoutState>(
         listener: LogoutListener.listen,
         builder: (context, state) {

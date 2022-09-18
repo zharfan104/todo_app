@@ -9,7 +9,8 @@ class AccountManagementServiceImpl implements AccountManagementService {
   bool get isLoggedIn => getToken() != null;
 
   @override
-  Future<void> login({required String token}) => HiveInjection.box.put(_tokenKey, token);
+  Future<void> login({required String token}) =>
+      HiveInjection.box.put(_tokenKey, token);
 
   @override
   String? getToken() => HiveInjection.box.get(_tokenKey);

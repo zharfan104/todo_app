@@ -8,8 +8,10 @@ import 'package:router/router.dart';
 class ApiInterceptors extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    final requestBody = const JsonEncoder.withIndent('  ').convert(options.data);
-    final queryParameters = const JsonEncoder.withIndent('  ').convert(options.queryParameters);
+    final requestBody =
+        const JsonEncoder.withIndent('  ').convert(options.data);
+    final queryParameters =
+        const JsonEncoder.withIndent('  ').convert(options.queryParameters);
     log(
       'Request URL : ${options.uri}\n'
       '----------------------------------------------------------------------\n'
@@ -27,7 +29,8 @@ class ApiInterceptors extends Interceptor {
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
-    final prettyString = const JsonEncoder.withIndent('  ').convert(response.data);
+    final prettyString =
+        const JsonEncoder.withIndent('  ').convert(response.data);
     log(
       'Status Code: ${response.statusCode}\n'
       '——————————————————————————————————————————————————————————————————————\n'

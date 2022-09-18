@@ -16,7 +16,9 @@ class SubmitLoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyButton(
       title: 'Login',
-      onPressed: isLoginDataValid ? context.read<LoginCubit>().onClickLoginButton : null,
+      onPressed: isLoginDataValid
+          ? context.read<LoginCubit>().onClickLoginButton
+          : null,
     );
   }
 }

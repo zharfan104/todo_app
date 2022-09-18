@@ -27,7 +27,8 @@ class ProfileCubit extends Cubit<ProfileState> {
   void updateProfile() async {
     emit(state.copyWith(loadProfileStatus: ViewData.loading()));
 
-    final response = await repository.updateProfile(profile: state.toParamUpdateProfileMdl);
+    final response =
+        await repository.updateProfile(profile: state.toParamUpdateProfileMdl);
 
     _emitProfileResponseToState(response);
 

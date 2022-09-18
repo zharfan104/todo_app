@@ -14,6 +14,7 @@ class LoginState with _$LoginState {
 }
 
 extension LoginStateX on LoginState {
-  ParamLoginMdl get toParamLoginMdl => ParamLoginMdl(email: email, password: password);
+  ParamLoginMdl get toParamLoginMdl =>
+      ParamLoginMdl(email: email, password: password);
   bool get isLoginDataValid => email.isNotEmpty && password.isNotEmpty;
 }

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'widgets/index.dart';
 
-class TodoListAppBarView extends StatelessWidget implements PreferredSizeWidget {
+class TodoListAppBarView extends StatelessWidget
+    implements PreferredSizeWidget {
   const TodoListAppBarView({
     Key? key,
   }) : super(key: key);

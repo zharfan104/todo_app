@@ -16,6 +16,7 @@ class RegisterCoreModule {
     sl.registerLazySingleton<RestClient>(
       () => RestClient(sl<DioHandler>().dio),
     );
-    sl.registerLazySingleton<AccountManagementService>(AccountManagementServiceImpl.new);
+    sl.registerLazySingleton<AccountManagementService>(
+        AccountManagementServiceImpl.new);
   }
 }

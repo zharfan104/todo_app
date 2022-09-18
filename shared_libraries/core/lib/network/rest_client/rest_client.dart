@@ -23,11 +23,13 @@ abstract class RestClient {
   Future<ResponseGetProfileMdl> getProfile();
 
   @PUT("/user/me")
-  Future<ResponseGetProfileMdl> updateProfile(@Body() ParamUpdateProfileMdl profile);
+  Future<ResponseGetProfileMdl> updateProfile(
+      @Body() ParamUpdateProfileMdl profile);
 
   @POST("/user/login")
   Future<ResponseLoginMdl> submitLogin(@Body() ParamLoginMdl paramLogin);
 
   @POST("/user/register")
-  Future<ResponseLoginMdl> submitRegister(@Body() ParamRegisterMdl paramRegister);
+  Future<ResponseLoginMdl> submitRegister(
+      @Body() ParamRegisterMdl paramRegister);
 }

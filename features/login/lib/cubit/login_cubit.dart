@@ -13,7 +13,8 @@ class LoginCubit extends Cubit<LoginState> {
 
   final LoginRepository loginRepository;
 
-  void onPasswordChanged(String password) => emit(state.copyWith(password: password));
+  void onPasswordChanged(String password) =>
+      emit(state.copyWith(password: password));
   void onEmailChanged(String email) => emit(state.copyWith(email: email));
 
   Future<void> onClickLoginButton() async {
@@ -25,7 +26,8 @@ class LoginCubit extends Cubit<LoginState> {
         emit(state.copyWith(submitLoginStatus: ViewData.loaded()));
       },
       errorCallback: (errorMessage) => emit(
-        state.copyWith(submitLoginStatus: ViewData.error(message: errorMessage)),
+        state.copyWith(
+            submitLoginStatus: ViewData.error(message: errorMessage)),
       ),
     );
   }

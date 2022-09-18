@@ -7,5 +7,6 @@ export 'flutter_bloc/flutter_bloc.dart';
 export 'freezed_annotation/freezed_annotation.dart';
 export 'get_it/get_it.dart';
 export 'helpers/helper.dart';
+export 'hive/hive.dart';
 export 'json_annotation/json_annotation.dart';
 export 'retrofit/retrofit.dart';

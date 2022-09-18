@@ -29,7 +29,7 @@ class AppBlocObserver extends BlocObserver {
 }
 
 Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
-  HiveInjection.register();
+  await HiveInjection.register();
   Injections.init();
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);

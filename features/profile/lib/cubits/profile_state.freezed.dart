@@ -16,8 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ProfileState {
-  ViewData<ResponseGetProfileMdl> get loadProfileStatus =>
-      throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  int get age => throw _privateConstructorUsedError;
+  ViewData<void> get loadProfileStatus => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProfileStateCopyWith<ProfileState> get copyWith =>
@@ -29,7 +31,8 @@ abstract class $ProfileStateCopyWith<$Res> {
   factory $ProfileStateCopyWith(
           ProfileState value, $Res Function(ProfileState) then) =
       _$ProfileStateCopyWithImpl<$Res>;
-  $Res call({ViewData<ResponseGetProfileMdl> loadProfileStatus});
+  $Res call(
+      {String name, String email, int age, ViewData<void> loadProfileStatus});
 }
 
 /// @nodoc
@@ -42,13 +45,28 @@ class _$ProfileStateCopyWithImpl<$Res> implements $ProfileStateCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? age = freezed,
     Object? loadProfileStatus = freezed,
   }) {
     return _then(_value.copyWith(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      age: age == freezed
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int,
       loadProfileStatus: loadProfileStatus == freezed
           ? _value.loadProfileStatus
           : loadProfileStatus // ignore: cast_nullable_to_non_nullable
-              as ViewData<ResponseGetProfileMdl>,
+              as ViewData<void>,
     ));
   }
 }
@@ -60,7 +78,8 @@ abstract class _$$_ProfileStateCopyWith<$Res>
           _$_ProfileState value, $Res Function(_$_ProfileState) then) =
       __$$_ProfileStateCopyWithImpl<$Res>;
   @override
-  $Res call({ViewData<ResponseGetProfileMdl> loadProfileStatus});
+  $Res call(
+      {String name, String email, int age, ViewData<void> loadProfileStatus});
 }
 
 /// @nodoc
@@ -76,13 +95,28 @@ class __$$_ProfileStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? age = freezed,
     Object? loadProfileStatus = freezed,
   }) {
     return _then(_$_ProfileState(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      age: age == freezed
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int,
       loadProfileStatus: loadProfileStatus == freezed
           ? _value.loadProfileStatus
           : loadProfileStatus // ignore: cast_nullable_to_non_nullable
-              as ViewData<ResponseGetProfileMdl>,
+              as ViewData<void>,
     ));
   }
 }
@@ -90,14 +124,27 @@ class __$$_ProfileStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_ProfileState implements _ProfileState {
-  const _$_ProfileState({required this.loadProfileStatus});
+  const _$_ProfileState(
+      {this.name = '',
+      this.email = '',
+      this.age = 0,
+      required this.loadProfileStatus});
 
   @override
-  final ViewData<ResponseGetProfileMdl> loadProfileStatus;
+  @JsonKey()
+  final String name;
+  @override
+  @JsonKey()
+  final String email;
+  @override
+  @JsonKey()
+  final int age;
+  @override
+  final ViewData<void> loadProfileStatus;
 
   @override
   String toString() {
-    return 'ProfileState(loadProfileStatus: $loadProfileStatus)';
+    return 'ProfileState(name: $name, email: $email, age: $age, loadProfileStatus: $loadProfileStatus)';
   }
 
   @override
@@ -105,13 +152,20 @@ class _$_ProfileState implements _ProfileState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ProfileState &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.age, age) &&
             const DeepCollectionEquality()
                 .equals(other.loadProfileStatus, loadProfileStatus));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(loadProfileStatus));
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(age),
+      const DeepCollectionEquality().hash(loadProfileStatus));
 
   @JsonKey(ignore: true)
   @override
@@ -121,11 +175,19 @@ class _$_ProfileState implements _ProfileState {
 
 abstract class _ProfileState implements ProfileState {
   const factory _ProfileState(
-          {required final ViewData<ResponseGetProfileMdl> loadProfileStatus}) =
-      _$_ProfileState;
+      {final String name,
+      final String email,
+      final int age,
+      required final ViewData<void> loadProfileStatus}) = _$_ProfileState;
 
   @override
-  ViewData<ResponseGetProfileMdl> get loadProfileStatus;
+  String get name;
+  @override
+  String get email;
+  @override
+  int get age;
+  @override
+  ViewData<void> get loadProfileStatus;
   @override
   @JsonKey(ignore: true)
   _$$_ProfileStateCopyWith<_$_ProfileState> get copyWith =>

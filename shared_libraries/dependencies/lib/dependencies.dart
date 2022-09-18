@@ -4,6 +4,7 @@ export 'collection/collection.dart';
 export 'dio/dio.dart';
 export 'equatable/equatable.dart';
 export 'flutter_bloc/flutter_bloc.dart';
+export 'fluttertoast/fluttertoast.dart';
 export 'freezed_annotation/freezed_annotation.dart';
 export 'get_it/get_it.dart';
 export 'helpers/helper.dart';

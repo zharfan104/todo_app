@@ -1,5 +1,7 @@
+import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
+import 'package:profile/pages/widgets/edit_profile_form.dart';
 
 import '../cubits/index.dart';
 import '../repositories/profile_repository_impl.dart';
@@ -24,17 +26,23 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: profileCubit,
-      child: Scaffold(
+      child: BasePage(
+        appBar: const MyAppBar(title: "Edit Profile"),
         body: BlocBuilder<ProfileCubit, ProfileState>(
           builder: (context, state) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(state.email),
-                Text(state.name),
-              ],
-            );
+            if (state.loadProfileStatus.isLoading) {
+              return const MyLoadingIndicator();
+            }
+
+            if (state.loadProfileStatus.isHasData) {
+              return EditProfileForm(profileState: state);
+            }
+
+            if (state.loadProfileStatus.isError) {
+              return ErrorTextBanner(text: state.loadProfileStatus.message);
+            }
+
+            return const SizedBox();
           },
         ),
       ),

@@ -46,10 +46,12 @@ class TaskListCubit extends Cubit<TaskListState> {
   }
 
   void sortAllTasks() {
-    final tasks = state.loadTasksData.data!;
+    final tasks = List<TaskMdl>.from(state.loadTasksData.data!);
 
     final isAllTaskCompleted = tasks.every((task) => (task.completed ?? false));
-    if (!isAllTaskCompleted) _sortTasks(tasks);
+    final isAlreadySorted = tasks.isSorted(taskComparator);
+    final isNeedToSort = !isAllTaskCompleted && !isAlreadySorted;
+    if (isNeedToSort) _sortTasks(tasks);
 
     showLoading();
 
@@ -71,16 +73,16 @@ class TaskListCubit extends Cubit<TaskListState> {
     }
   }
 
-  void _sortTasks(List<TaskMdl> tasks) {
-    tasks.sort((a, b) {
-      if (a.completed == b.completed) {
-        return 0;
-      }
+  void _sortTasks(List<TaskMdl> tasks) => tasks.sort(taskComparator);
 
-      if (b.completed ?? false) {
-        return -1;
-      }
-      return 1;
-    });
+  int taskComparator(TaskMdl a, TaskMdl b) {
+    if (a.completed == b.completed) {
+      return 0;
+    }
+
+    if (b.completed ?? false) {
+      return -1;
+    }
+    return 1;
   }
 }

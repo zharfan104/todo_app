@@ -15,10 +15,16 @@ class TaskListCubit extends Cubit<TaskListState> {
 
   Future<void> getTasks() async {
     showLoading();
-    final responseGetTasks = await repository.getTasks();
-    emit(state.copyWith(
-      loadTasksData: ViewData.loaded(data: responseGetTasks.tasks),
-    ));
+    DioErrorWrapperHelper.wrap(callback: () async {
+      final responseGetTasks = await repository.getTasks();
+      emit(state.copyWith(
+        loadTasksData: ViewData.loaded(data: responseGetTasks.tasks),
+      ));
+    }, errorCallback: (errorMessage) {
+      emit(state.copyWith(
+        loadTasksData: ViewData.error(message: errorMessage),
+      ));
+    });
   }
 
   Future<void> updateTasks(int index) async {

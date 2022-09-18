@@ -1,7 +1,8 @@
 import 'package:core/core.dart';
 import 'package:dependencies/dependencies.dart';
-import 'package:profile/repositories/profile_repository.dart';
 import 'package:resources/resources.dart';
+
+import 'profile_repository.dart';
 
 class ProfileRepositoryImpl extends ProfileRepository {
   final RestClient client = sl();

@@ -17,6 +17,7 @@ dependencies:
     path: ../../resources
 
 dev_dependencies:
+  hive_generator:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0

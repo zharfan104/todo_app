@@ -27,6 +27,7 @@ dependencies:
     path: ../../features/todo_list
 
 dev_dependencies:
+  hive_generator:
   auto_route_generator:
   bloc_test: ^9.1.0
   build_runner:        

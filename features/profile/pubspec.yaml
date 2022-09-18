@@ -25,6 +25,7 @@ dependencies:
     path: ../../resources
 
 dev_dependencies:
+  hive_generator:
   build_runner:
   flutter_test:
     sdk: flutter

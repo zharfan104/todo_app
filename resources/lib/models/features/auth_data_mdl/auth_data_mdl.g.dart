@@ -33,7 +33,5 @@ class AuthDataMdlAdapter extends TypeAdapter<AuthDataMdl> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AuthDataMdlAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
+      other is AuthDataMdlAdapter && runtimeType == other.runtimeType && typeId == other.typeId;
 }

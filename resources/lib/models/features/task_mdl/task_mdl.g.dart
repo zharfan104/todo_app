@@ -12,8 +12,7 @@ _$_TaskMdl _$$_TaskMdlFromJson(Map<String, dynamic> json) => _$_TaskMdl(
       id: json['_id'] as String?,
     );
 
-Map<String, dynamic> _$$_TaskMdlToJson(_$_TaskMdl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_TaskMdlToJson(_$_TaskMdl instance) => <String, dynamic>{
       'description': instance.description,
       'completed': instance.completed,
       '_id': instance.id,

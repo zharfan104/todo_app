@@ -10,8 +10,7 @@ class ParamUpdateTaskMdl {
     this.completed,
   });
 
-  factory ParamUpdateTaskMdl.fromJson(Map<String, dynamic> json) =>
-      _$ParamUpdateTaskMdlFromJson(json);
+  factory ParamUpdateTaskMdl.fromJson(Map<String, dynamic> json) => _$ParamUpdateTaskMdlFromJson(json);
 
   Map<String, dynamic> toJson() => _$ParamUpdateTaskMdlToJson(this);
 }

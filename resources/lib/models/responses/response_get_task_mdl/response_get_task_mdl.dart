@@ -14,6 +14,5 @@ class ResponseGetTaskMdl with _$ResponseGetTaskMdl {
     @JsonKey(name: 'data') List<TaskMdl>? tasks,
   }) = _ResponseGetTaskMdl;
 
-  factory ResponseGetTaskMdl.fromJson(Map<String, dynamic> json) =>
-      _$ResponseGetTaskMdlFromJson(json);
+  factory ResponseGetTaskMdl.fromJson(Map<String, dynamic> json) => _$ResponseGetTaskMdlFromJson(json);
 }

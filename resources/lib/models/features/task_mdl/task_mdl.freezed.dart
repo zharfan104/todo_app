@@ -32,10 +32,8 @@ mixin _$TaskMdl {
 
 /// @nodoc
 abstract class $TaskMdlCopyWith<$Res> {
-  factory $TaskMdlCopyWith(TaskMdl value, $Res Function(TaskMdl) then) =
-      _$TaskMdlCopyWithImpl<$Res>;
-  $Res call(
-      {String? description, bool? completed, @JsonKey(name: '_id') String? id});
+  factory $TaskMdlCopyWith(TaskMdl value, $Res Function(TaskMdl) then) = _$TaskMdlCopyWithImpl<$Res>;
+  $Res call({String? description, bool? completed, @JsonKey(name: '_id') String? id});
 }
 
 /// @nodoc
@@ -71,17 +69,13 @@ class _$TaskMdlCopyWithImpl<$Res> implements $TaskMdlCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$_TaskMdlCopyWith<$Res> implements $TaskMdlCopyWith<$Res> {
-  factory _$$_TaskMdlCopyWith(
-          _$_TaskMdl value, $Res Function(_$_TaskMdl) then) =
-      __$$_TaskMdlCopyWithImpl<$Res>;
+  factory _$$_TaskMdlCopyWith(_$_TaskMdl value, $Res Function(_$_TaskMdl) then) = __$$_TaskMdlCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String? description, bool? completed, @JsonKey(name: '_id') String? id});
+  $Res call({String? description, bool? completed, @JsonKey(name: '_id') String? id});
 }
 
 /// @nodoc
-class __$$_TaskMdlCopyWithImpl<$Res> extends _$TaskMdlCopyWithImpl<$Res>
-    implements _$$_TaskMdlCopyWith<$Res> {
+class __$$_TaskMdlCopyWithImpl<$Res> extends _$TaskMdlCopyWithImpl<$Res> implements _$$_TaskMdlCopyWith<$Res> {
   __$$_TaskMdlCopyWithImpl(_$_TaskMdl _value, $Res Function(_$_TaskMdl) _then)
       : super(_value, (v) => _then(v as _$_TaskMdl));
 
@@ -114,11 +108,9 @@ class __$$_TaskMdlCopyWithImpl<$Res> extends _$TaskMdlCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskMdl implements _TaskMdl {
-  const _$_TaskMdl(
-      {this.description, this.completed, @JsonKey(name: '_id') this.id});
+  const _$_TaskMdl({this.description, this.completed, @JsonKey(name: '_id') this.id});
 
-  factory _$_TaskMdl.fromJson(Map<String, dynamic> json) =>
-      _$$_TaskMdlFromJson(json);
+  factory _$_TaskMdl.fromJson(Map<String, dynamic> json) => _$$_TaskMdlFromJson(json);
 
   @override
   final String? description;
@@ -138,24 +130,19 @@ class _$_TaskMdl implements _TaskMdl {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TaskMdl &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.description, description) &&
             const DeepCollectionEquality().equals(other.completed, completed) &&
             const DeepCollectionEquality().equals(other.id, id));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(completed),
-      const DeepCollectionEquality().hash(id));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(completed), const DeepCollectionEquality().hash(id));
 
   @JsonKey(ignore: true)
   @override
-  _$$_TaskMdlCopyWith<_$_TaskMdl> get copyWith =>
-      __$$_TaskMdlCopyWithImpl<_$_TaskMdl>(this, _$identity);
+  _$$_TaskMdlCopyWith<_$_TaskMdl> get copyWith => __$$_TaskMdlCopyWithImpl<_$_TaskMdl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -166,10 +153,8 @@ class _$_TaskMdl implements _TaskMdl {
 }
 
 abstract class _TaskMdl implements TaskMdl {
-  const factory _TaskMdl(
-      {final String? description,
-      final bool? completed,
-      @JsonKey(name: '_id') final String? id}) = _$_TaskMdl;
+  const factory _TaskMdl({final String? description, final bool? completed, @JsonKey(name: '_id') final String? id}) =
+      _$_TaskMdl;
 
   factory _TaskMdl.fromJson(Map<String, dynamic> json) = _$_TaskMdl.fromJson;
 
@@ -182,6 +167,5 @@ abstract class _TaskMdl implements TaskMdl {
   String? get id;
   @override
   @JsonKey(ignore: true)
-  _$$_TaskMdlCopyWith<_$_TaskMdl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_TaskMdlCopyWith<_$_TaskMdl> get copyWith => throw _privateConstructorUsedError;
 }

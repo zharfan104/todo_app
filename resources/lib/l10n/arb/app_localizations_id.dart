@@ -18,4 +18,16 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get updateProfile => 'Update Profil';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get emailHint => 'Masukkan email kamu di sini..';
+
+  @override
+  String get passwordLabel => 'Password';
+
+  @override
+  String get passwordHint => 'Masukkan password kamu di sini..';
 }

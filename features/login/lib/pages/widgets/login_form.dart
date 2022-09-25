@@ -13,6 +13,8 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
+
     return BlocBuilder<LoginCubit, LoginState>(
       builder: (context, state) {
         return Padding(
@@ -24,14 +26,14 @@ class LoginForm extends StatelessWidget {
               const SizedBox(height: SizeConstant.spacingSmall),
               MyTextField(
                 initialValue: state.email,
-                labelText: 'Email',
-                hintText: 'Input your email here..',
+                labelText: localization.emailLabel,
+                hintText: localization.emailHint,
                 onChanged: context.read<LoginCubit>().onEmailChanged,
               ),
               MyTextField(
                 initialValue: state.password,
-                labelText: 'Password',
-                hintText: 'Input your password here..',
+                labelText: localization.passwordLabel,
+                hintText: localization.passwordHint,
                 onChanged: context.read<LoginCubit>().onPasswordChanged,
               ),
               const SizedBox(height: SizeConstant.spacingBig),

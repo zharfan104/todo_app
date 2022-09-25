@@ -4,5 +4,9 @@
     "newTask": "New Task",
     "submit": "Submit",
     "emptyTask": "Add your first todo :D",
-    "updateProfile": "Update Profile"
+    "updateProfile": "Update Profile",
+    "emailLabel": "Email",
+    "emailHint": "Input your email here..",
+    "passwordLabel": "Password",
+    "passwordHint": "Input your password here.."
 }

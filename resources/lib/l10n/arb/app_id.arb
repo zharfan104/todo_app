@@ -4,5 +4,9 @@
     "newTask": "Task Baru",
     "submit": "Kirim",
     "emptyTask": "Tambahkan To do pertamamu :D",
-    "updateProfile": "Update Profil"
+    "updateProfile": "Update Profil",
+    "emailLabel": "Email",
+    "emailHint": "Masukkan email kamu di sini..",
+    "passwordLabel": "Password",
+    "passwordHint": "Masukkan password kamu di sini.."
 }

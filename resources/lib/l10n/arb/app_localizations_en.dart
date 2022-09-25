@@ -18,4 +18,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get updateProfile => 'Update Profile';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get emailHint => 'Input your email here..';
+
+  @override
+  String get passwordLabel => 'Password';
+
+  @override
+  String get passwordHint => 'Input your password here..';
 }

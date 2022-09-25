@@ -1,0 +1,8 @@
+{
+    "@@locale": "id",
+    "counterAppBarTitle": "Counter",
+    "newTask": "Task Baru",
+    "submit": "Kirim",
+    "emptyTask": "Tambahkan To do pertamamu :D",
+    "updateProfile": "Update Profil"
+}

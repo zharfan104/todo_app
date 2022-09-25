@@ -3,5 +3,6 @@
     "counterAppBarTitle": "Counter",
     "newTask": "New Task",
     "submit": "Submit",
-    "emptyTask": "Add your first todo :D"
+    "emptyTask": "Add your first todo :D",
+    "updateProfile": "Update Profile"
 }

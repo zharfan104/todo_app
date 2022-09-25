@@ -36,7 +36,7 @@ class EditProfileForm extends StatelessWidget {
           const SizedBox(height: SizeConstant.spacingBig),
           ElevatedButton(
             onPressed: context.read<ProfileCubit>().updateProfile,
-            child: const Text('Update Profile'),
+            child: Text(context.l10n.updateProfile),
           ),
         ],
       ),

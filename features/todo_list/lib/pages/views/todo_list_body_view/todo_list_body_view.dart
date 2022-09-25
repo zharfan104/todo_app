@@ -1,6 +1,7 @@
 import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
+import 'package:resources/resources.dart';
 import 'package:todo_list/cubits/index.dart';
 
 import 'widgets/index.dart';
@@ -28,7 +29,7 @@ class TodoListBodyView extends StatelessWidget {
           final tasks = taskListState.data!;
 
           if (tasks.isEmpty) {
-            return const Center(child: Text('Add your first todo :D'));
+            return Center(child: Text(context.l10n.emptyTask));
           }
 
           return ListView.builder(

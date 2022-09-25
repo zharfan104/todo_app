@@ -15,4 +15,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get emptyTask => 'Add your first todo :D';
+
+  @override
+  String get updateProfile => 'Update Profile';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resources/resources.dart';
 
 class SubmitFormDialog extends StatelessWidget {
   const SubmitFormDialog({
@@ -27,7 +28,7 @@ class SubmitFormDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('New task'),
+      title: Text(context.l10n.newTask),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -36,7 +37,7 @@ class SubmitFormDialog extends StatelessWidget {
           ElevatedButton(
             style: ElevatedButton.styleFrom(minimumSize: const Size(360, 36)),
             onPressed: onSubmit,
-            child: const Text('Submit'),
+            child: Text(context.l10n.submit),
           ),
         ],
       ),

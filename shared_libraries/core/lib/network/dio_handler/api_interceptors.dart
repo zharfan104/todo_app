@@ -43,7 +43,7 @@ class ApiInterceptors extends Interceptor {
   void onError(DioError err, ErrorInterceptorHandler handler) {
     log('Dio Error : $err');
     if (err.response?.statusCode == 401) {
-      sl<AppRouter>().push(const LoginRoute());
+      sl<AppRouter>().replace(const LoginRoute());
     }
     return handler.next(err);
   }

@@ -7,7 +7,7 @@ import '../cubits/index.dart';
 class LogoutListener {
   static void listen(BuildContext context, LogoutState state) {
     if (state.submitLogoutStatus.isHasData) {
-      context.router.push(const LoginRoute());
+      context.router.replace(const LoginRoute());
     }
   }
 }

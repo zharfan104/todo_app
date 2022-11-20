@@ -28,7 +28,10 @@ class ApiInterceptors extends Interceptor {
   }
 
   @override
-  void onResponse(Response response, ResponseInterceptorHandler handler) {
+  void onResponse(
+    Response<dynamic> response,
+    ResponseInterceptorHandler handler,
+  ) {
     final prettyString =
         const JsonEncoder.withIndent('  ').convert(response.data);
     log(
@@ -49,10 +52,11 @@ class ApiInterceptors extends Interceptor {
   }
 
   Map<String, dynamic> _defaultHeader() {
-    AccountManagementService accountManagementService = sl();
+    final accountManagementService = sl<AccountManagementService>();
     final token = accountManagementService.getToken();
 
-    Map<String, String> headers = {};
+    final headers = <String, String>{};
+
     headers['Content-Type'] = 'application/json';
     headers['Authorization'] = 'Bearer $token';
     return headers;

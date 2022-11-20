@@ -7,29 +7,29 @@ part 'rest_client.g.dart';
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
-  @GET("/task")
+  @GET('/task')
   Future<ResponseGetTaskMdl> getTasks();
 
-  @POST("/task")
+  @POST('/task')
   Future<void> addTask(@Body() TaskMdl task);
 
-  @PUT("/task/{id}")
+  @PUT('/task/{id}')
   Future<void> updateTask(@Path() String? id, @Body() ParamUpdateTaskMdl task);
 
-  @DELETE("/task/{id}")
+  @DELETE('/task/{id}')
   Future<void> deleteTask(@Path() String? id);
 
-  @GET("/user/me")
+  @GET('/user/me')
   Future<ResponseGetProfileMdl> getProfile();
 
-  @PUT("/user/me")
+  @PUT('/user/me')
   Future<ResponseGetProfileMdl> updateProfile(
       @Body() ParamUpdateProfileMdl profile);
 
-  @POST("/user/login")
+  @POST('/user/login')
   Future<ResponseLoginMdl> submitLogin(@Body() ParamLoginMdl paramLogin);
 
-  @POST("/user/register")
+  @POST('/user/register')
   Future<ResponseLoginMdl> submitRegister(
       @Body() ParamRegisterMdl paramRegister);
 }

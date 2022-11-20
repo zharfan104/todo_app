@@ -1,15 +1,14 @@
 import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
+import 'package:register/cubit/index.dart';
+import 'package:register/pages/widgets/submit_register_button.dart';
 import 'package:resources/resources.dart';
-
-import '../../cubit/index.dart';
-import 'submit_register_button.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +20,9 @@ class RegisterForm extends StatelessWidget {
           padding: const EdgeInsets.all(SizeConstant.spacingMedium),
           child: Column(
             children: <Widget>[
-              //I'de prefer not using padding in the middle of `Column` or `Row` due to decrease readibility
-              //learn more: https://iiro.dev/putting-build-methods-on-a-diet/
+              // I'de prefer not using padding in the middle of `Column`
+              // or `Row` due to decrease readibility
+              // learn more: https://iiro.dev/putting-build-methods-on-a-diet/
               const SizedBox(height: SizeConstant.spacingSmall),
               MyTextField(
                 initialValue: state.name,

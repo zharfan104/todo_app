@@ -17,23 +17,23 @@ dependencies:
     path: ../../shared_libraries/core
   dependencies:
     path: ../../shared_libraries/dependencies
-  router:
-    path: ../../shared_libraries/router
   flutter:
     sdk: flutter
   resources:
     path: ../../resources
+  router:
+    path: ../../shared_libraries/router
 
 dev_dependencies:
-  hive_generator:
   build_runner:
+  dart_code_metrics: ^4.17.1
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  freezed: ^2.1.0+1
+  hive_generator:
   json_serializable: '>4.4.0'
   retrofit_generator: '>=4.0.0 <5.0.0'
-  dart_code_metrics: ^4.17.1
-  freezed: ^2.1.0+1
-
+  very_good_analysis: ^3.0.1
 
 flutter:

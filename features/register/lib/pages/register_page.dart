@@ -1,14 +1,13 @@
 import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
-
-import '../cubit/index.dart';
-import '../listeners/index.dart';
-import '../repositories/index.dart';
-import 'widgets/index.dart';
+import 'package:register/cubit/index.dart';
+import 'package:register/listeners/index.dart';
+import 'package:register/pages/widgets/index.dart';
+import 'package:register/repositories/index.dart';
 
 class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {

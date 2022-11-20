@@ -2,8 +2,8 @@ import 'package:common/common.dart';
 import 'package:core/core.dart';
 import 'package:dependencies/dependencies.dart';
 
-import '../repositories/index.dart';
-import 'index.dart';
+import 'package:register/cubit/index.dart';
+import 'package:register/repositories/index.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
   RegisterCubit({
@@ -24,7 +24,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   Future<void> onClickRegisterButton() async {
     emit(state.copyWith(submitRegisterStatus: ViewData.loading()));
 
-    final AccountManagementService accountManagementService = sl();
+    final accountManagementService = sl<AccountManagementService>();
 
     await DioErrorWrapperHelper.wrap(
       callback: () async {
@@ -32,13 +32,14 @@ class RegisterCubit extends Cubit<RegisterState> {
           paramRegister: state.toParamRegisterMdl,
         );
 
-        accountManagementService.login(token: token);
+        await accountManagementService.login(token: token);
 
         emit(state.copyWith(submitRegisterStatus: ViewData.loaded()));
       },
       errorCallback: (errorMessage) => emit(
         state.copyWith(
-            submitRegisterStatus: ViewData.error(message: errorMessage)),
+          submitRegisterStatus: ViewData.error(message: errorMessage),
+        ),
       ),
     );
   }

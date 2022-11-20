@@ -2,6 +2,7 @@ import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:resources/resources.dart';
+import 'package:router/router.dart';
 
 import '../../cubit/index.dart';
 import 'submit_login_button.dart';
@@ -38,6 +39,11 @@ class LoginForm extends StatelessWidget {
               ),
               const SizedBox(height: SizeConstant.spacingBig),
               SubmitLoginButton(isLoginDataValid: state.isLoginDataValid),
+              const SizedBox(height: SizeConstant.spacingBig),
+              MySecondaryButton(
+                title: 'Do not have account? click here to register',
+                onPressed: () => context.router.navigate(const RegisterRoute()),
+              ),
             ],
           ),
         );

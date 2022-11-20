@@ -1,3 +1,4 @@
+import 'package:component/component.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:resources/resources.dart';
@@ -34,9 +35,9 @@ class EditProfileForm extends StatelessWidget {
             onChanged: context.read<ProfileCubit>().onAgeChanged,
           ),
           const SizedBox(height: SizeConstant.spacingBig),
-          ElevatedButton(
+          MyButton(
             onPressed: context.read<ProfileCubit>().updateProfile,
-            child: Text(context.l10n.updateProfile),
+            title: context.l10n.updateProfile,
           ),
         ],
       ),

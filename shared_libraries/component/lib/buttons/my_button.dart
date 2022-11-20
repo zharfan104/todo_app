@@ -13,10 +13,14 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DismissKeyboard(
-      child: ElevatedButton(
-        onPressed: onPressed,
-        child: Text(title),
+    return SizedBox(
+      width: double.maxFinite,
+      height: 32,
+      child: DismissKeyboard(
+        child: ElevatedButton(
+          onPressed: onPressed,
+          child: Text(title),
+        ),
       ),
     );
   }

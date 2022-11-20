@@ -8,5 +8,9 @@
     "emailLabel": "Email",
     "emailHint": "Masukkan email kamu di sini..",
     "passwordLabel": "Password",
-    "passwordHint": "Masukkan password kamu di sini.."
+    "passwordHint": "Masukkan password kamu di sini..",
+    "ageLabel": "Usia",
+    "ageHint": "Masukkan usia kamu di sini..",
+    "nameLabel": "Nama",
+    "nameHint": "Masukkan nama kamu di sini.."
 }

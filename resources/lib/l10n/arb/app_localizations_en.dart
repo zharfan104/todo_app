@@ -1,8 +1,8 @@
-import 'app_localizations.dart';
+import 'package:resources/l10n/arb/app_localizations.dart';
 
 /// The translations for English (`en`).
 class AppLocalizationsEn extends AppLocalizations {
-  AppLocalizationsEn([String locale = 'en']) : super(locale);
+  AppLocalizationsEn([super.locale = 'en']);
 
   @override
   String get counterAppBarTitle => 'Counter';
@@ -30,4 +30,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get passwordHint => 'Input your password here..';
+
+  @override
+  String get ageLabel => 'Age';
+
+  @override
+  String get ageHint => 'Input your age here..';
+
+  @override
+  String get nameLabel => 'Name';
+
+  @override
+  String get nameHint => 'Input your name here..';
 }

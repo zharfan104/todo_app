@@ -1,8 +1,8 @@
-import 'app_localizations.dart';
+import 'package:resources/l10n/arb/app_localizations.dart';
 
 /// The translations for Indonesian (`id`).
 class AppLocalizationsId extends AppLocalizations {
-  AppLocalizationsId([String locale = 'id']) : super(locale);
+  AppLocalizationsId([super.locale = 'id']);
 
   @override
   String get counterAppBarTitle => 'Counter';
@@ -30,4 +30,16 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get passwordHint => 'Masukkan password kamu di sini..';
+
+  @override
+  String get ageLabel => 'Usia';
+
+  @override
+  String get ageHint => 'Masukkan usia kamu di sini..';
+
+  @override
+  String get nameLabel => 'Nama';
+
+  @override
+  String get nameHint => 'Masukkan nama kamu di sini..';
 }

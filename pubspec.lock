@@ -623,6 +623,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  register:
+    dependency: transitive
+    description:
+      path: "features/register"
+      relative: true
+    source: path
+    version: "0.0.1"
   resources:
     dependency: "direct main"
     description:

@@ -7,9 +7,7 @@ jobs:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
-      coverage_excludes: "*.g.dart"
-      dart_sdk: "stable"
-      platform: "chrome,vm"
-      analyze_directories: "lib"
+      flutter_channel: "stable"
+      flutter_version: "3.3.2"

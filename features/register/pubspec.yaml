@@ -1,0 +1,39 @@
+name: register
+description: Register Page
+version: 0.0.1
+homepage:
+publish_to: none
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  common:
+    path: ../../shared_libraries/common
+  component:
+    path: ../../shared_libraries/component
+  core:
+    path: ../../shared_libraries/core
+  dependencies:
+    path: ../../shared_libraries/dependencies
+  router:
+    path: ../../shared_libraries/router
+  flutter:
+    sdk: flutter
+  resources:
+    path: ../../resources
+
+dev_dependencies:
+  hive_generator:
+  build_runner:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  json_serializable: '>4.4.0'
+  retrofit_generator: '>=4.0.0 <5.0.0'
+  dart_code_metrics: ^4.17.1
+  freezed: ^2.1.0+1
+
+
+flutter:

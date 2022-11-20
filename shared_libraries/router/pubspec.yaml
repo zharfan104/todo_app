@@ -23,6 +23,8 @@ dependencies:
     path: ../../features/login
   profile:
     path: ../../features/profile
+  register:
+    path: ../../features/register
   resources:
     path: ../../resources
   todo_list:

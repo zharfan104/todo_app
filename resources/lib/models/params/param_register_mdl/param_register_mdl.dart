@@ -11,13 +11,13 @@ class ParamRegisterMdl {
     this.age,
   });
 
+  factory ParamRegisterMdl.fromJson(Map<String, dynamic> json) =>
+      _$ParamRegisterMdlFromJson(json);
+
   String? name;
   String? email;
   String? password;
   int? age;
-
-  factory ParamRegisterMdl.fromJson(Map<String, dynamic> json) =>
-      _$ParamRegisterMdlFromJson(json);
 
   Map<String, dynamic> toJson() => _$ParamRegisterMdlToJson(this);
 }

@@ -4,10 +4,6 @@ part 'param_update_profile_mdl.g.dart';
 
 @JsonSerializable()
 class ParamUpdateProfileMdl {
-  String? name;
-  String? email;
-  int? age;
-
   ParamUpdateProfileMdl({
     this.name,
     this.email,
@@ -16,6 +12,10 @@ class ParamUpdateProfileMdl {
 
   factory ParamUpdateProfileMdl.fromJson(Map<String, dynamic> json) =>
       _$ParamUpdateProfileMdlFromJson(json);
+
+  String? name;
+  String? email;
+  int? age;
 
   Map<String, dynamic> toJson() => _$ParamUpdateProfileMdlToJson(this);
 }

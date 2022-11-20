@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../color_scheme/index.dart';
-import '../models/index.dart';
-import '../text_styles/index.dart';
+import 'package:resources/themes/color_scheme/index.dart';
+import 'package:resources/themes/models/index.dart';
+import 'package:resources/themes/text_styles/index.dart';
 
 class ThemeHelper {
   static ThemeData buildLightTheme() => _buildTheme(Brightness.light);

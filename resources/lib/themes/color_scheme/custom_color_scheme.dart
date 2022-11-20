@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/index.dart';
+import 'package:resources/themes/models/index.dart';
 
 class CustomColorScheme {
   static const lightColorScheme = CustomColorSchemeMdl(

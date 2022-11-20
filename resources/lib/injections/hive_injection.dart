@@ -4,7 +4,7 @@ import 'package:resources/resources.dart';
 class HiveInjection {
   //Because it is not so complicated app, we only will have one open HiveBox.
   static String get _hiveBox => 'hiveBox';
-  static late final Box box;
+  static late final Box<dynamic> box;
 
   static Future<void> register() async {
     await Hive.initFlutter();

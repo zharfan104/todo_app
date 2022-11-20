@@ -7,7 +7,7 @@
 
 import 'package:flutter/widgets.dart';
 
-import 'arb/index.dart';
+import 'package:resources/l10n/arb/index.dart';
 
 export 'arb/index.dart';
 

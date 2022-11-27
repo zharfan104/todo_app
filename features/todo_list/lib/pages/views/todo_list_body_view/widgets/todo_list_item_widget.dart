@@ -20,7 +20,12 @@ class TodoListItemWidget extends StatelessWidget {
       key: ValueKey(task.id),
       onDismissed: (_) => context.read<TaskListCubit>().deleteTask(index),
       child: CheckboxListTile(
-        title: Text(task.description ?? ''),
+        title: Text(
+          task.description ?? '',
+          style: TextStyle(
+            decoration: (task.completed ?? false) ? TextDecoration.lineThrough : TextDecoration.none,
+          ),
+        ),
         autofocus: false,
         activeColor: Colors.green,
         checkColor: Colors.white,

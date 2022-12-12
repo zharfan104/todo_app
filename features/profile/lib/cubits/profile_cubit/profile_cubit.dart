@@ -23,6 +23,8 @@ class ProfileCubit extends Cubit<ProfileState> {
   void onNameChanged(String name) => emit(state.copyWith(name: name));
   void onEmailChanged(String email) => emit(state.copyWith(email: email));
   void onAgeChanged(String age) => emit(state.copyWith(age: int.parse(age)));
+  void onPasswordChanged(String password) =>
+      emit(state.copyWith(password: password));
 
   void updateProfile() async {
     emit(state.copyWith(loadProfileStatus: ViewData.loading()));
@@ -40,6 +42,7 @@ class ProfileCubit extends Cubit<ProfileState> {
       name: response.name,
       email: response.email,
       age: response.age,
+      password: response.password,
       loadProfileStatus: ViewData.loaded(),
     ));
   }

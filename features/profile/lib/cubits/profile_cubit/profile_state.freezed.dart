@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ProfileState {
   String get name => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
   ViewData<void> get loadProfileStatus => throw _privateConstructorUsedError;
 
@@ -32,7 +33,11 @@ abstract class $ProfileStateCopyWith<$Res> {
           ProfileState value, $Res Function(ProfileState) then) =
       _$ProfileStateCopyWithImpl<$Res>;
   $Res call(
-      {String name, String email, int age, ViewData<void> loadProfileStatus});
+      {String name,
+      String email,
+      String password,
+      int age,
+      ViewData<void> loadProfileStatus});
 }
 
 /// @nodoc
@@ -47,6 +52,7 @@ class _$ProfileStateCopyWithImpl<$Res> implements $ProfileStateCopyWith<$Res> {
   $Res call({
     Object? name = freezed,
     Object? email = freezed,
+    Object? password = freezed,
     Object? age = freezed,
     Object? loadProfileStatus = freezed,
   }) {
@@ -58,6 +64,10 @@ class _$ProfileStateCopyWithImpl<$Res> implements $ProfileStateCopyWith<$Res> {
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
               as String,
       age: age == freezed
           ? _value.age
@@ -79,7 +89,11 @@ abstract class _$$_ProfileStateCopyWith<$Res>
       __$$_ProfileStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name, String email, int age, ViewData<void> loadProfileStatus});
+      {String name,
+      String email,
+      String password,
+      int age,
+      ViewData<void> loadProfileStatus});
 }
 
 /// @nodoc
@@ -97,6 +111,7 @@ class __$$_ProfileStateCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? email = freezed,
+    Object? password = freezed,
     Object? age = freezed,
     Object? loadProfileStatus = freezed,
   }) {
@@ -108,6 +123,10 @@ class __$$_ProfileStateCopyWithImpl<$Res>
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
               as String,
       age: age == freezed
           ? _value.age
@@ -127,6 +146,7 @@ class _$_ProfileState implements _ProfileState {
   const _$_ProfileState(
       {this.name = '',
       this.email = '',
+      this.password = '',
       this.age = 0,
       required this.loadProfileStatus});
 
@@ -138,13 +158,16 @@ class _$_ProfileState implements _ProfileState {
   final String email;
   @override
   @JsonKey()
+  final String password;
+  @override
+  @JsonKey()
   final int age;
   @override
   final ViewData<void> loadProfileStatus;
 
   @override
   String toString() {
-    return 'ProfileState(name: $name, email: $email, age: $age, loadProfileStatus: $loadProfileStatus)';
+    return 'ProfileState(name: $name, email: $email, password: $password, age: $age, loadProfileStatus: $loadProfileStatus)';
   }
 
   @override
@@ -154,6 +177,7 @@ class _$_ProfileState implements _ProfileState {
             other is _$_ProfileState &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.age, age) &&
             const DeepCollectionEquality()
                 .equals(other.loadProfileStatus, loadProfileStatus));
@@ -164,6 +188,7 @@ class _$_ProfileState implements _ProfileState {
       runtimeType,
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(password),
       const DeepCollectionEquality().hash(age),
       const DeepCollectionEquality().hash(loadProfileStatus));
 
@@ -177,6 +202,7 @@ abstract class _ProfileState implements ProfileState {
   const factory _ProfileState(
       {final String name,
       final String email,
+      final String password,
       final int age,
       required final ViewData<void> loadProfileStatus}) = _$_ProfileState;
 
@@ -184,6 +210,8 @@ abstract class _ProfileState implements ProfileState {
   String get name;
   @override
   String get email;
+  @override
+  String get password;
   @override
   int get age;
   @override

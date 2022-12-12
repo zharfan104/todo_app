@@ -9,6 +9,7 @@ class ProfileState with _$ProfileState {
   const factory ProfileState({
     @Default('') String name,
     @Default('') String email,
+    @Default('') String password,
     @Default(0) int age,
     required ViewData<void> loadProfileStatus,
   }) = _ProfileState;
@@ -19,5 +20,6 @@ extension ProfileStateX on ProfileState {
         name: name,
         email: email,
         age: age,
+        password: password,
       );
 }

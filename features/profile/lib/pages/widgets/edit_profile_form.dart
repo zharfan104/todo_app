@@ -34,6 +34,10 @@ class EditProfileForm extends StatelessWidget {
             initialValue: '${profileState.age}',
             onChanged: context.read<ProfileCubit>().onAgeChanged,
           ),
+          TextFormField(
+            initialValue: profileState.password,
+            onChanged: context.read<ProfileCubit>().onPasswordChanged,
+          ),
           const SizedBox(height: SizeConstant.spacingBig),
           MyButton(
             onPressed: context.read<ProfileCubit>().updateProfile,

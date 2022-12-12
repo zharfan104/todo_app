@@ -13,7 +13,7 @@ class _RestClient implements RestClient {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://api-nodejs-todolist.herokuapp.com';
+    baseUrl ??= 'http://10.0.2.2:8080';
   }
 
   final Dio _dio;

@@ -14,10 +14,10 @@ abstract class RestClient {
   Future<void> addTask(@Body() TaskMdl task);
 
   @PUT('/task/{id}')
-  Future<void> updateTask(@Path() String? id, @Body() ParamUpdateTaskMdl task);
+  Future<void> updateTask(@Path() int? id, @Body() ParamUpdateTaskMdl task);
 
   @DELETE('/task/{id}')
-  Future<void> deleteTask(@Path() String? id);
+  Future<void> deleteTask(@Path() int? id);
 
   @GET('/user/me')
   Future<ResponseGetProfileMdl> getProfile();

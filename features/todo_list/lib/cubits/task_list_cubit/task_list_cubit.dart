@@ -47,7 +47,9 @@ class TaskListCubit extends Cubit<TaskListState> {
   Future<void> deleteTask(int index) async {
     final tasks = List<TaskMdl>.from(state.loadTasksData.data!);
     final task = tasks.removeAt(index);
-    await repository.deleteTask(id: task.id ?? '');
+    if (task.id != null) {
+      await repository.deleteTask(id: task.id!);
+    }
     emit(state.copyWith(loadTasksData: ViewData.loaded(data: tasks)));
   }
 
@@ -66,7 +68,7 @@ class TaskListCubit extends Cubit<TaskListState> {
 
   void showLoading() => emit(state.copyWith(loadTasksData: ViewData.loading()));
 
-  Future<void> _updateTaskToNetwork({String? id, bool? isCompleted}) async {
+  Future<void> _updateTaskToNetwork({int? id, bool? isCompleted}) async {
     try {
       await repository.updateTasks(
         id: id,

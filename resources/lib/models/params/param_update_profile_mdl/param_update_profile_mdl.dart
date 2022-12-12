@@ -8,6 +8,7 @@ class ParamUpdateProfileMdl {
     this.name,
     this.email,
     this.age,
+    this.password,
   });
 
   factory ParamUpdateProfileMdl.fromJson(Map<String, dynamic> json) =>
@@ -16,6 +17,7 @@ class ParamUpdateProfileMdl {
   String? name;
   String? email;
   int? age;
+  String? password;
 
   Map<String, dynamic> toJson() => _$ParamUpdateProfileMdlToJson(this);
 }

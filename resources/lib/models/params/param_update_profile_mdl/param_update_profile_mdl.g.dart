@@ -12,6 +12,7 @@ ParamUpdateProfileMdl _$ParamUpdateProfileMdlFromJson(
       name: json['name'] as String?,
       email: json['email'] as String?,
       age: json['age'] as int?,
+      password: json['password'] as String?,
     );
 
 Map<String, dynamic> _$ParamUpdateProfileMdlToJson(
@@ -20,4 +21,5 @@ Map<String, dynamic> _$ParamUpdateProfileMdlToJson(
       'name': instance.name,
       'email': instance.email,
       'age': instance.age,
+      'password': instance.password,
     };

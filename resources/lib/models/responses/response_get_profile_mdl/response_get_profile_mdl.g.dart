@@ -12,6 +12,7 @@ _$_ResponseGetProfileMdl _$$_ResponseGetProfileMdlFromJson(
       name: json['name'] as String? ?? '',
       email: json['email'] as String? ?? '',
       age: json['age'] as int? ?? 0,
+      password: json['password'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_ResponseGetProfileMdlToJson(
@@ -20,4 +21,5 @@ Map<String, dynamic> _$$_ResponseGetProfileMdlToJson(
       'name': instance.name,
       'email': instance.email,
       'age': instance.age,
+      'password': instance.password,
     };

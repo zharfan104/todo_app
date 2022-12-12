@@ -24,6 +24,7 @@ mixin _$ResponseGetProfileMdl {
   String get name => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +37,7 @@ abstract class $ResponseGetProfileMdlCopyWith<$Res> {
   factory $ResponseGetProfileMdlCopyWith(ResponseGetProfileMdl value,
           $Res Function(ResponseGetProfileMdl) then) =
       _$ResponseGetProfileMdlCopyWithImpl<$Res>;
-  $Res call({String name, String email, int age});
+  $Res call({String name, String email, int age, String password});
 }
 
 /// @nodoc
@@ -53,6 +54,7 @@ class _$ResponseGetProfileMdlCopyWithImpl<$Res>
     Object? name = freezed,
     Object? email = freezed,
     Object? age = freezed,
+    Object? password = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -67,6 +69,10 @@ class _$ResponseGetProfileMdlCopyWithImpl<$Res>
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -78,7 +84,7 @@ abstract class _$$_ResponseGetProfileMdlCopyWith<$Res>
           $Res Function(_$_ResponseGetProfileMdl) then) =
       __$$_ResponseGetProfileMdlCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String email, int age});
+  $Res call({String name, String email, int age, String password});
 }
 
 /// @nodoc
@@ -98,6 +104,7 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
     Object? name = freezed,
     Object? email = freezed,
     Object? age = freezed,
+    Object? password = freezed,
   }) {
     return _then(_$_ResponseGetProfileMdl(
       name: name == freezed
@@ -112,6 +119,10 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -120,7 +131,7 @@ class __$$_ResponseGetProfileMdlCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
   const _$_ResponseGetProfileMdl(
-      {this.name = '', this.email = '', this.age = 0});
+      {this.name = '', this.email = '', this.age = 0, this.password = ''});
 
   factory _$_ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =>
       _$$_ResponseGetProfileMdlFromJson(json);
@@ -134,10 +145,13 @@ class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
   @override
   @JsonKey()
   final int age;
+  @override
+  @JsonKey()
+  final String password;
 
   @override
   String toString() {
-    return 'ResponseGetProfileMdl(name: $name, email: $email, age: $age)';
+    return 'ResponseGetProfileMdl(name: $name, email: $email, age: $age, password: $password)';
   }
 
   @override
@@ -147,7 +161,8 @@ class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
             other is _$_ResponseGetProfileMdl &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.age, age));
+            const DeepCollectionEquality().equals(other.age, age) &&
+            const DeepCollectionEquality().equals(other.password, password));
   }
 
   @JsonKey(ignore: true)
@@ -156,7 +171,8 @@ class _$_ResponseGetProfileMdl implements _ResponseGetProfileMdl {
       runtimeType,
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(age));
+      const DeepCollectionEquality().hash(age),
+      const DeepCollectionEquality().hash(password));
 
   @JsonKey(ignore: true)
   @override
@@ -176,7 +192,8 @@ abstract class _ResponseGetProfileMdl implements ResponseGetProfileMdl {
   const factory _ResponseGetProfileMdl(
       {final String name,
       final String email,
-      final int age}) = _$_ResponseGetProfileMdl;
+      final int age,
+      final String password}) = _$_ResponseGetProfileMdl;
 
   factory _ResponseGetProfileMdl.fromJson(Map<String, dynamic> json) =
       _$_ResponseGetProfileMdl.fromJson;
@@ -187,6 +204,8 @@ abstract class _ResponseGetProfileMdl implements ResponseGetProfileMdl {
   String get email;
   @override
   int get age;
+  @override
+  String get password;
   @override
   @JsonKey(ignore: true)
   _$$_ResponseGetProfileMdlCopyWith<_$_ResponseGetProfileMdl> get copyWith =>

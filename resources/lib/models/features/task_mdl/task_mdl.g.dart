@@ -9,12 +9,12 @@ part of 'task_mdl.dart';
 _$_TaskMdl _$$_TaskMdlFromJson(Map<String, dynamic> json) => _$_TaskMdl(
       description: json['description'] as String?,
       completed: json['completed'] as bool?,
-      id: json['_id'] as String?,
+      id: json['id'] as int?,
     );
 
 Map<String, dynamic> _$$_TaskMdlToJson(_$_TaskMdl instance) =>
     <String, dynamic>{
       'description': instance.description,
       'completed': instance.completed,
-      '_id': instance.id,
+      'id': instance.id,
     };

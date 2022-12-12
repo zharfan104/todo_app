@@ -22,8 +22,7 @@ TaskMdl _$TaskMdlFromJson(Map<String, dynamic> json) {
 mixin _$TaskMdl {
   String? get description => throw _privateConstructorUsedError;
   bool? get completed => throw _privateConstructorUsedError;
-  @JsonKey(name: '_id')
-  String? get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,8 +33,7 @@ mixin _$TaskMdl {
 abstract class $TaskMdlCopyWith<$Res> {
   factory $TaskMdlCopyWith(TaskMdl value, $Res Function(TaskMdl) then) =
       _$TaskMdlCopyWithImpl<$Res>;
-  $Res call(
-      {String? description, bool? completed, @JsonKey(name: '_id') String? id});
+  $Res call({String? description, bool? completed, int? id});
 }
 
 /// @nodoc
@@ -64,7 +62,7 @@ class _$TaskMdlCopyWithImpl<$Res> implements $TaskMdlCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
     ));
   }
 }
@@ -75,8 +73,7 @@ abstract class _$$_TaskMdlCopyWith<$Res> implements $TaskMdlCopyWith<$Res> {
           _$_TaskMdl value, $Res Function(_$_TaskMdl) then) =
       __$$_TaskMdlCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String? description, bool? completed, @JsonKey(name: '_id') String? id});
+  $Res call({String? description, bool? completed, int? id});
 }
 
 /// @nodoc
@@ -106,7 +103,7 @@ class __$$_TaskMdlCopyWithImpl<$Res> extends _$TaskMdlCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
     ));
   }
 }
@@ -114,8 +111,7 @@ class __$$_TaskMdlCopyWithImpl<$Res> extends _$TaskMdlCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TaskMdl implements _TaskMdl {
-  const _$_TaskMdl(
-      {this.description, this.completed, @JsonKey(name: '_id') this.id});
+  const _$_TaskMdl({this.description, this.completed, this.id});
 
   factory _$_TaskMdl.fromJson(Map<String, dynamic> json) =>
       _$$_TaskMdlFromJson(json);
@@ -125,8 +121,7 @@ class _$_TaskMdl implements _TaskMdl {
   @override
   final bool? completed;
   @override
-  @JsonKey(name: '_id')
-  final String? id;
+  final int? id;
 
   @override
   String toString() {
@@ -169,7 +164,7 @@ abstract class _TaskMdl implements TaskMdl {
   const factory _TaskMdl(
       {final String? description,
       final bool? completed,
-      @JsonKey(name: '_id') final String? id}) = _$_TaskMdl;
+      final int? id}) = _$_TaskMdl;
 
   factory _TaskMdl.fromJson(Map<String, dynamic> json) = _$_TaskMdl.fromJson;
 
@@ -178,8 +173,7 @@ abstract class _TaskMdl implements TaskMdl {
   @override
   bool? get completed;
   @override
-  @JsonKey(name: '_id')
-  String? get id;
+  int? get id;
   @override
   @JsonKey(ignore: true)
   _$$_TaskMdlCopyWith<_$_TaskMdl> get copyWith =>

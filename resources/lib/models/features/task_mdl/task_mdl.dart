@@ -10,7 +10,7 @@ class TaskMdl with _$TaskMdl {
   const factory TaskMdl({
     String? description,
     bool? completed,
-    @JsonKey(name: '_id') String? id,
+    int? id,
   }) = _TaskMdl;
 
   factory TaskMdl.fromJson(Map<String, dynamic> json) =>

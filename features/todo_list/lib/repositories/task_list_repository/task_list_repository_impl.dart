@@ -12,7 +12,7 @@ class TaskListRepositoryImpl implements TaskListRepository {
 
   @override
   Future<void> updateTasks({
-    String? id,
+    int? id,
     bool? isCompleted,
   }) =>
       client.updateTask(
@@ -21,5 +21,5 @@ class TaskListRepositoryImpl implements TaskListRepository {
       );
 
   @override
-  Future<void> deleteTask({required String id}) => client.deleteTask(id);
+  Future<void> deleteTask({required int id}) => client.deleteTask(id);
 }

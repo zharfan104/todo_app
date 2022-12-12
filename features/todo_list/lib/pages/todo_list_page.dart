@@ -30,6 +30,13 @@ class _TodoListPageState extends State<TodoListPage> {
   }
 
   @override
+  void dispose() {
+    taskListCubit.close();
+    addTaskCubit.close();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [

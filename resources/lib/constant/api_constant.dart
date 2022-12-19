@@ -1,3 +1,3 @@
 class ApiConstant {
-  static const apiUrl = 'http://10.0.2.2:8080';
+  static const apiUrl = 'https://todo-app-backend-ekzym2b2zq-et.a.run.app';
 }
